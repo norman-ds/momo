@@ -1,0 +1,314 @@
+2020-06-10T03:18:29Z;I;START Download
+2020-06-10T03:18:29Z;I;Rest API lesen ...
+2020-06-10T03:18:30Z;I;. Todesfälle nach Fünf-Jahres-Altersgruppe, Geschlecht, Woche und Kanton (CSV-Datei) vom 2020-06-04T22:45:57.455517
+2020-06-10T03:18:30Z;I;..API in ../data/api.csv geschrieben !
+2020-06-10T03:18:30Z;I;URL download lesen ...
+2020-06-10T03:18:30Z;W;..../data/neu_todesfaelle_woche.csv wird überschrieben !
+2020-06-10T03:18:45Z;I;..CSV in ../data/neu_todesfaelle_woche.csv geschrieben !
+2020-06-10T03:18:45Z;I;END Download
+2020-06-10T03:18:45Z;I;START Plausibilisierung
+2020-06-10T03:18:47Z;I;../data/todesfaelle_woche.csv gelesen 740939 Zeilen und 9 Spalten
+2020-06-10T03:18:48Z;I;../data/neu_todesfaelle_woche.csv gelesen 741606 Zeilen und 9 Spalten
+2020-06-10T03:18:48Z;I;Referenztabellen erstellt ...
+2020-06-10T03:18:48Z;I;Validatortabellen erstellt ...
+2020-06-10T03:18:48Z;I;..2019 mit 4 Todesfälle
+2020-06-10T03:18:48Z;I;..2020 mit 1197 Todesfälle
+2020-06-10T03:18:48Z;I;..2020-W14 mit 5 Todesfälle
+2020-06-10T03:18:48Z;I;..2020-W15 mit 4 Todesfälle
+2020-06-10T03:18:48Z;I;..2020-W16 mit 7 Todesfälle
+2020-06-10T03:18:48Z;I;..2020-W17 mit 6 Todesfälle
+2020-06-10T03:18:48Z;I;..2020-W18 mit 12 Todesfälle
+2020-06-10T03:18:48Z;I;..2020-W19 mit 8 Todesfälle
+2020-06-10T03:18:48Z;I;..2020-W20 mit 39 Todesfälle
+2020-06-10T03:18:48Z;I;..2020-W21 mit 1084 Todesfälle
+2020-06-10T03:18:49Z;I;Differenzen in 418 Zeilen mit 1201 Todesfällen ..
+2020-06-10T03:18:49Z;I;..in ../data/diff.csv geschrieben !
+2020-06-10T03:18:49Z;I;../data/todesfaelle_woche.csv umbenannt in ../data/arc_todesfaelle_woche.csv
+2020-06-10T03:18:49Z;I;../data/neu_todesfaelle_woche.csv umbenannt in ../data/todesfaelle_woche.csv
+2020-06-10T03:18:49Z;I;END Plausibilisierung
+2020-06-11T03:18:31Z;I;START Download
+2020-06-11T03:18:31Z;I;Rest API lesen ...
+2020-06-11T03:18:32Z;E;Error HTTP error 403.
+2020-06-11T03:18:32Z;I;END Download
+2020-06-12T03:18:22Z;I;START Download
+2020-06-12T03:18:22Z;I;Rest API lesen ...
+2020-06-12T03:18:22Z;E;Error HTTP error 403.
+2020-06-12T03:18:22Z;I;END Download
+2020-06-13T03:18:27Z;I;START Download
+2020-06-13T03:18:27Z;I;Rest API lesen ...
+2020-06-13T03:18:28Z;E;Error HTTP error 403.
+2020-06-13T03:18:28Z;I;END Download
+2020-06-16T03:18:26Z;I;START Download
+2020-06-16T03:18:26Z;I;Rest API lesen ...
+2020-06-16T03:18:26Z;E;Error HTTP error 403.
+2020-06-16T03:18:26Z;I;END Download
+2020-06-16T12:02:17Z;I;START Download
+2020-06-16T12:02:18Z;I;Rest API lesen ...
+2020-06-16T12:02:19Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-06-10T09:52:16.283821
+2020-06-16T12:02:19Z;I;..API in ../data/api.csv geschrieben !
+2020-06-16T12:02:19Z;I;URL download lesen ...
+2020-06-16T12:02:21Z;I;..CSV in ../data/new_todesfaelle_woche.csv geschrieben !
+2020-06-16T12:02:21Z;I;<Last_pull> badge created
+2020-06-16T12:02:21Z;I;END Download
+2020-06-16T12:02:21Z;I;START Validierung
+2020-06-16T12:02:22Z;I;todesfaelle_woche.csv gelesen 741606 Zeilen und 9 Spalten
+2020-06-16T12:02:22Z;I;new_todesfaelle_woche.csv gelesen 14959 Zeilen und 9 Spalten
+2020-06-16T12:02:22Z;I;Referenztabellen erstellt ...
+2020-06-16T12:02:22Z;I;Validatortabellen erstellt ...
+2020-06-16T12:02:22Z;I;..2020 mit 1023 Todesfälle
+2020-06-16T12:02:22Z;W;..2020-W09 mit -1 Todesfälle
+2020-06-16T12:02:22Z;I;..2020-W15 mit 2 Todesfälle
+2020-06-16T12:02:22Z;I;..2020-W16 mit 4 Todesfälle
+2020-06-16T12:02:22Z;I;..2020-W17 mit 3 Todesfälle
+2020-06-16T12:02:22Z;I;..2020-W18 mit 6 Todesfälle
+2020-06-16T12:02:22Z;I;..2020-W19 mit 5 Todesfälle
+2020-06-16T12:02:22Z;I;..2020-W20 mit 9 Todesfälle
+2020-06-16T12:02:22Z;I;..2020-W21 mit 29 Todesfälle
+2020-06-16T12:02:22Z;I;..2020-W22 mit 941 Todesfälle
+2020-06-16T12:02:23Z;I;Differenzen in 374 Zeilen mit 1023 Todesfällen ..
+2020-06-16T12:02:23Z;I;..in ../data/diff.csv geschrieben !
+2020-06-16T12:02:23Z;I;../data/todesfaelle_woche.csv umbenannt in ../data/arc_todesfaelle_woche.csv
+2020-06-16T12:02:23Z;I;../data/new_todesfaelle_woche.csv umbenannt in ../data/todesfaelle_woche.csv
+2020-06-16T12:02:23Z;I;<Valdidate> badge created
+2020-06-16T12:02:23Z;I;END Validierung
+2020-06-16T12:02:23Z;I;START API
+2020-06-16T12:02:23Z;I;restful auf disc
+2020-06-16T12:02:23Z;I;badge auf disc
+2020-06-16T12:02:23Z;I;END API
+2020-06-16T12:22:36Z;I;START Download
+2020-06-16T12:22:37Z;I;Rest API lesen ...
+2020-06-16T12:22:38Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-06-10T09:52:16.283821
+2020-06-16T12:22:38Z;I;..API in ../data/api.csv geschrieben !
+2020-06-16T12:22:38Z;I;URL download lesen ...
+2020-06-16T12:22:40Z;I;..CSV in ../data/new_todesfaelle_woche.csv geschrieben !
+2020-06-16T12:22:40Z;I;<Last_pull> badge created
+2020-06-16T12:22:40Z;I;END Download
+2020-06-16T12:22:40Z;I;START Validierung
+2020-06-16T12:22:41Z;I;todesfaelle_woche.csv gelesen 14959 Zeilen und 9 Spalten
+2020-06-16T12:22:41Z;I;new_todesfaelle_woche.csv gelesen 14959 Zeilen und 9 Spalten
+2020-06-16T12:22:41Z;E;Daten identisch
+2020-06-16T12:22:41Z;I;END Validierung
+2020-06-16T12:42:28Z;I;START Download
+2020-06-16T12:42:30Z;I;Rest API lesen ...
+2020-06-16T12:42:31Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-06-10T09:52:16.283821
+2020-06-16T12:42:31Z;I;..API in ../data/api.csv geschrieben !
+2020-06-16T12:42:31Z;I;URL download lesen ...
+2020-06-16T12:42:31Z;W;..../data/new_todesfaelle_woche.csv wird überschrieben !
+2020-06-16T12:42:33Z;I;..CSV in ../data/new_todesfaelle_woche.csv geschrieben !
+2020-06-16T12:42:33Z;I;<Last_pull> badge created
+2020-06-16T12:42:33Z;I;END Download
+2020-06-16T12:42:33Z;I;START Validierung
+2020-06-16T12:42:33Z;I;todesfaelle_woche.csv gelesen 14959 Zeilen und 9 Spalten
+2020-06-16T12:42:33Z;I;new_todesfaelle_woche.csv gelesen 14959 Zeilen und 9 Spalten
+2020-06-16T12:42:33Z;E;Daten identisch
+2020-06-16T12:42:33Z;I;END Validierung
+2020-06-17T03:17:41Z;I;START Download
+2020-06-17T03:17:43Z;I;Rest API lesen ...
+2020-06-17T03:17:44Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-06-10T09:52:16.283821
+2020-06-17T03:17:44Z;I;..API in ../data/api.csv geschrieben !
+2020-06-17T03:17:44Z;I;URL download lesen ...
+2020-06-17T03:17:44Z;W;..../data/new_todesfaelle_woche.csv wird überschrieben !
+2020-06-17T03:17:46Z;I;..CSV in ../data/new_todesfaelle_woche.csv geschrieben !
+2020-06-17T03:17:46Z;I;<Last_pull> badge created
+2020-06-17T03:17:46Z;I;END Download
+2020-06-17T03:17:46Z;I;START Validierung
+2020-06-17T03:17:46Z;I;todesfaelle_woche.csv gelesen 14959 Zeilen und 9 Spalten
+2020-06-17T03:17:46Z;I;new_todesfaelle_woche.csv gelesen 14959 Zeilen und 9 Spalten
+2020-06-17T03:17:46Z;E;Daten identisch
+2020-06-17T03:17:46Z;I;END Validierung
+2020-06-18T03:17:30Z;I;START Download
+2020-06-18T03:17:31Z;I;Rest API lesen ...
+2020-06-18T03:17:32Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-06-10T09:52:16.283821
+2020-06-18T03:17:32Z;I;..API in ../data/api.csv geschrieben !
+2020-06-18T03:17:32Z;I;URL download lesen ...
+2020-06-18T03:17:32Z;W;..../data/new_todesfaelle_woche.csv wird überschrieben !
+2020-06-18T03:17:34Z;I;..CSV in ../data/new_todesfaelle_woche.csv geschrieben !
+2020-06-18T03:17:34Z;I;<Last_pull> badge created
+2020-06-18T03:17:34Z;I;END Download
+2020-06-18T03:17:34Z;I;START Validierung
+2020-06-18T03:17:34Z;I;todesfaelle_woche.csv gelesen 14959 Zeilen und 9 Spalten
+2020-06-18T03:17:34Z;I;new_todesfaelle_woche.csv gelesen 14959 Zeilen und 9 Spalten
+2020-06-18T03:17:34Z;E;Daten identisch
+2020-06-18T03:17:34Z;I;END Validierung
+2020-06-23T03:17:45Z;I;START Download
+2020-06-23T03:17:46Z;I;Rest API lesen ...
+2020-06-23T03:17:47Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-06-18T11:30:55.468596
+2020-06-23T03:17:47Z;I;..API in ../data/api.csv geschrieben !
+2020-06-23T03:17:47Z;I;URL download lesen ...
+2020-06-23T03:17:47Z;W;..../data/new_todesfaelle_woche.csv wird überschrieben !
+2020-06-23T03:17:48Z;I;..CSV in ../data/new_todesfaelle_woche.csv geschrieben !
+2020-06-23T03:17:48Z;I;<Last_pull> badge created
+2020-06-23T03:17:48Z;I;END Download
+2020-06-23T03:17:48Z;I;START Validierung
+2020-06-23T03:17:48Z;I;todesfaelle_woche.csv gelesen 14959 Zeilen und 9 Spalten
+2020-06-23T03:17:48Z;I;new_todesfaelle_woche.csv gelesen 15614 Zeilen und 9 Spalten
+2020-06-23T03:17:48Z;I;Referenztabellen erstellt ...
+2020-06-23T03:17:48Z;I;Validatortabellen erstellt ...
+2020-06-23T03:17:48Z;I;..2020 mit 1142 Todesfälle
+2020-06-23T03:17:48Z;W;..2020-W08 mit -1 Todesfälle
+2020-06-23T03:17:48Z;I;..2020-W16 mit 5 Todesfälle
+2020-06-23T03:17:48Z;I;..2020-W17 mit 7 Todesfälle
+2020-06-23T03:17:48Z;I;..2020-W18 mit 6 Todesfälle
+2020-06-23T03:17:48Z;I;..2020-W19 mit 6 Todesfälle
+2020-06-23T03:17:48Z;I;..2020-W20 mit 12 Todesfälle
+2020-06-23T03:17:48Z;I;..2020-W21 mit 21 Todesfälle
+2020-06-23T03:17:48Z;I;..2020-W22 mit 58 Todesfälle
+2020-06-23T03:17:48Z;I;..2020-W23 mit 1002 Todesfälle
+2020-06-23T03:17:48Z;I;Differenzen in 434 Zeilen mit 1143 Todesfällen ..
+2020-06-23T03:17:48Z;I;..in ../data/diff.csv geschrieben !
+2020-06-23T03:17:48Z;I;../data/todesfaelle_woche.csv umbenannt in ../data/arc_todesfaelle_woche.csv
+2020-06-23T03:17:48Z;I;../data/new_todesfaelle_woche.csv umbenannt in ../data/todesfaelle_woche.csv
+2020-06-23T03:17:48Z;I;<Valdidate> badge created
+2020-06-23T03:17:48Z;I;END Validierung
+2020-06-23T03:17:48Z;I;START API
+2020-06-23T03:17:48Z;I;restful auf disc
+2020-06-23T03:17:48Z;I;badge auf disc
+2020-06-23T03:17:48Z;I;END API
+2020-06-24T03:17:29Z;I;START Download
+2020-06-24T03:17:30Z;I;Rest API lesen ...
+2020-06-24T03:17:31Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-06-18T11:30:55.468596
+2020-06-24T03:17:31Z;I;..API in ../data/api.csv geschrieben !
+2020-06-24T03:17:31Z;I;URL download lesen ...
+2020-06-24T03:17:33Z;I;..CSV in ../data/new_todesfaelle_woche.csv geschrieben !
+2020-06-24T03:17:33Z;I;<Last_pull> badge created
+2020-06-24T03:17:33Z;I;END Download
+2020-06-24T03:17:33Z;I;START Validierung
+2020-06-24T03:17:33Z;I;todesfaelle_woche.csv gelesen 15614 Zeilen und 9 Spalten
+2020-06-24T03:17:34Z;I;new_todesfaelle_woche.csv gelesen 15614 Zeilen und 9 Spalten
+2020-06-24T03:17:34Z;E;Daten identisch
+2020-06-24T03:17:34Z;I;END Validierung
+2020-06-25T03:17:39Z;I;START Download
+2020-06-25T03:17:41Z;I;Rest API lesen ...
+2020-06-25T03:17:42Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-06-25T02:14:04.642067
+2020-06-25T03:17:42Z;I;..API in ../data/api.csv geschrieben !
+2020-06-25T03:17:42Z;I;URL download lesen ...
+2020-06-25T03:17:42Z;W;..../data/new_todesfaelle_woche.csv wird überschrieben !
+2020-06-25T03:17:44Z;I;..CSV in ../data/new_todesfaelle_woche.csv geschrieben !
+2020-06-25T03:17:44Z;I;<Last_pull> badge created
+2020-06-25T03:17:44Z;I;END Download
+2020-06-25T03:17:44Z;I;START Validierung
+2020-06-25T03:17:44Z;I;todesfaelle_woche.csv gelesen 15614 Zeilen und 9 Spalten
+2020-06-25T03:17:44Z;I;new_todesfaelle_woche.csv gelesen 16282 Zeilen und 9 Spalten
+2020-06-25T03:17:44Z;I;Referenztabellen erstellt ...
+2020-06-25T03:17:44Z;I;Validatortabellen erstellt ...
+2020-06-25T03:17:44Z;I;..2020 mit 1166 Todesfälle
+2020-06-25T03:17:44Z;I;..2020-W17 mit 2 Todesfälle
+2020-06-25T03:17:44Z;I;..2020-W18 mit 2 Todesfälle
+2020-06-25T03:17:44Z;I;..2020-W19 mit 6 Todesfälle
+2020-06-25T03:17:44Z;I;..2020-W20 mit 9 Todesfälle
+2020-06-25T03:17:44Z;I;..2020-W21 mit 10 Todesfälle
+2020-06-25T03:17:44Z;I;..2020-W22 mit 32 Todesfälle
+2020-06-25T03:17:44Z;I;..2020-W23 mit 85 Todesfälle
+2020-06-25T03:17:44Z;I;..2020-W24 mit 990 Todesfälle
+2020-06-25T03:17:44Z;I;Differenzen in 445 Zeilen mit 1166 Todesfällen ..
+2020-06-25T03:17:44Z;I;..in ../data/diff.csv geschrieben !
+2020-06-25T03:17:44Z;I;../data/todesfaelle_woche.csv umbenannt in ../data/arc_todesfaelle_woche.csv
+2020-06-25T03:17:44Z;I;../data/new_todesfaelle_woche.csv umbenannt in ../data/todesfaelle_woche.csv
+2020-06-25T03:17:44Z;I;<Valdidate> badge created
+2020-06-25T03:17:44Z;I;END Validierung
+2020-06-25T03:17:44Z;I;START API
+2020-06-25T03:17:44Z;I;restful auf disc
+2020-06-25T03:17:44Z;I;badge auf disc
+2020-06-25T03:17:44Z;I;END API
+2020-06-26T03:17:43Z;I;START Download
+2020-06-26T03:17:44Z;I;Rest API lesen ...
+2020-06-26T03:17:45Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-06-25T02:14:04.642067
+2020-06-26T03:17:45Z;I;..API in ../data/api.csv geschrieben !
+2020-06-26T03:17:45Z;I;URL download lesen ...
+2020-06-26T03:17:47Z;I;..CSV in ../data/new_todesfaelle_woche.csv geschrieben !
+2020-06-26T03:17:47Z;I;<Last_pull> badge created
+2020-06-26T03:17:47Z;I;END Download
+2020-06-26T03:17:47Z;I;START Validierung
+2020-06-26T03:17:47Z;I;todesfaelle_woche.csv gelesen 16282 Zeilen und 9 Spalten
+2020-06-26T03:17:47Z;I;new_todesfaelle_woche.csv gelesen 16282 Zeilen und 9 Spalten
+2020-06-26T03:17:47Z;E;Daten identisch
+2020-06-26T03:17:47Z;I;END Validierung
+2020-06-27T03:17:29Z;I;START Download
+2020-06-27T03:17:30Z;I;Rest API lesen ...
+2020-06-27T03:17:31Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-06-25T02:14:04.642067
+2020-06-27T03:17:31Z;I;..API in ../data/api.csv geschrieben !
+2020-06-27T03:17:31Z;I;URL download lesen ...
+2020-06-27T03:17:31Z;W;..../data/new_todesfaelle_woche.csv wird überschrieben !
+2020-06-27T03:17:33Z;I;..CSV in ../data/new_todesfaelle_woche.csv geschrieben !
+2020-06-27T03:17:33Z;I;<Last_pull> badge created
+2020-06-27T03:17:33Z;I;END Download
+2020-06-27T03:17:33Z;I;START Validierung
+2020-06-27T03:17:33Z;I;todesfaelle_woche.csv gelesen 16282 Zeilen und 9 Spalten
+2020-06-27T03:17:33Z;I;new_todesfaelle_woche.csv gelesen 16282 Zeilen und 9 Spalten
+2020-06-27T03:17:33Z;E;Daten identisch
+2020-06-27T03:17:33Z;I;END Validierung
+2020-06-30T03:17:42Z;I;START Download
+2020-06-30T03:17:43Z;I;Opendata spec lesen ...
+2020-06-30T03:17:48Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-06-25T02:14:04.642067
+2020-06-30T03:17:48Z;I;..API in api.csv geschrieben !
+2020-06-30T03:17:48Z;I;URL download lesen ...
+2020-06-30T03:17:48Z;W;..new_todesfaelle_woche.csv wird überschrieben !
+2020-06-30T03:17:50Z;I;..CSV in new_todesfaelle_woche.csv geschrieben !
+2020-06-30T03:17:50Z;I;<Last_pull> badge created
+2020-06-30T03:17:50Z;I;END Download
+2020-06-30T03:17:50Z;I;START Validierung
+2020-06-30T03:17:50Z;I;todesfaelle_woche.csv gelesen 16282 Zeilen und 9 Spalten
+2020-06-30T03:17:50Z;I;new_todesfaelle_woche.csv gelesen 16282 Zeilen und 9 Spalten
+2020-06-30T03:17:50Z;E;Daten identisch
+2020-06-30T03:17:50Z;I;END Validierung
+2020-07-01T03:17:35Z;I;START Download
+2020-07-01T03:17:35Z;I;Opendata spec lesen ...
+2020-07-01T03:17:40Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-06-25T02:14:04.642067
+2020-07-01T03:17:40Z;I;..API in api.csv geschrieben !
+2020-07-01T03:17:40Z;I;URL download lesen ...
+2020-07-01T03:17:40Z;W;..new_todesfaelle_woche.csv wird überschrieben !
+2020-07-01T03:17:42Z;I;..CSV in new_todesfaelle_woche.csv geschrieben !
+2020-07-01T03:17:42Z;I;<Last_pull> badge created
+2020-07-01T03:17:42Z;I;END Download
+2020-07-01T03:17:42Z;I;START Validierung
+2020-07-01T03:17:42Z;I;todesfaelle_woche.csv gelesen 16282 Zeilen und 9 Spalten
+2020-07-01T03:17:42Z;I;new_todesfaelle_woche.csv gelesen 16282 Zeilen und 9 Spalten
+2020-07-01T03:17:42Z;E;Daten identisch
+2020-07-01T03:17:42Z;I;END Validierung
+2020-07-02T03:17:47Z;I;START Download
+2020-07-02T03:17:48Z;I;Opendata spec lesen ...
+2020-07-02T03:17:52Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-06-25T02:14:04.642067
+2020-07-02T03:17:52Z;I;..API in api.csv geschrieben !
+2020-07-02T03:17:52Z;I;URL download lesen ...
+2020-07-02T03:17:52Z;W;..new_todesfaelle_woche.csv wird überschrieben !
+2020-07-02T03:17:54Z;I;..CSV in new_todesfaelle_woche.csv geschrieben !
+2020-07-02T03:17:54Z;I;<Last_pull> badge created
+2020-07-02T03:17:54Z;I;END Download
+2020-07-02T03:17:54Z;I;START Validierung
+2020-07-02T03:17:55Z;I;todesfaelle_woche.csv gelesen 16282 Zeilen und 9 Spalten
+2020-07-02T03:17:55Z;I;new_todesfaelle_woche.csv gelesen 16282 Zeilen und 9 Spalten
+2020-07-02T03:17:55Z;E;Daten identisch
+2020-07-02T03:17:55Z;I;END Validierung
+2020-07-03T03:17:47Z;I;START Download
+2020-07-03T03:17:48Z;I;Opendata spec lesen ...
+2020-07-03T03:17:53Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-07-02T11:27:40.643168
+2020-07-03T03:17:53Z;I;..API in api.csv geschrieben !
+2020-07-03T03:17:53Z;I;URL download lesen ...
+2020-07-03T03:17:53Z;W;..new_todesfaelle_woche.csv wird überschrieben !
+2020-07-03T03:17:54Z;I;..CSV in new_todesfaelle_woche.csv geschrieben !
+2020-07-03T03:17:54Z;I;<Last_pull> badge created
+2020-07-03T03:17:54Z;I;END Download
+2020-07-03T03:17:54Z;I;START Validierung
+2020-07-03T03:17:54Z;I;todesfaelle_woche.csv gelesen 16282 Zeilen und 9 Spalten
+2020-07-03T03:17:54Z;I;new_todesfaelle_woche.csv gelesen 16948 Zeilen und 9 Spalten
+2020-07-03T03:17:54Z;I;Referenztabellen erstellt ...
+2020-07-03T03:17:54Z;I;Validatortabellen erstellt ...
+2020-07-03T03:17:54Z;I;..2020 mit 1126 Todesfälle
+2020-07-03T03:17:54Z;I;..2020-W18 mit 5 Todesfälle
+2020-07-03T03:17:54Z;I;..2020-W19 mit 1 Todesfälle
+2020-07-03T03:17:54Z;I;..2020-W20 mit 4 Todesfälle
+2020-07-03T03:17:54Z;I;..2020-W21 mit 10 Todesfälle
+2020-07-03T03:17:54Z;I;..2020-W22 mit 13 Todesfälle
+2020-07-03T03:17:54Z;I;..2020-W23 mit 26 Todesfälle
+2020-07-03T03:17:54Z;I;..2020-W24 mit 59 Todesfälle
+2020-07-03T03:17:54Z;I;..2020-W25 mit 978 Todesfälle
+2020-07-03T03:17:54Z;I;Differenzen in 429 Zeilen mit 1126 Todesfällen ..
+2020-07-03T03:17:54Z;I;..in ../data/diff.csv geschrieben !
+2020-07-03T03:17:54Z;I;../data/todesfaelle_woche.csv umbenannt in ../data/arc_todesfaelle_woche.csv
+2020-07-03T03:17:54Z;I;../data/new_todesfaelle_woche.csv umbenannt in ../data/todesfaelle_woche.csv
+2020-07-03T03:17:54Z;I;<Valdidate> badge created
+2020-07-03T03:17:54Z;I;END Validierung
+2020-07-03T03:17:54Z;I;START API
+2020-07-03T03:17:54Z;I;restful auf disc
+2020-07-03T03:17:54Z;I;badge auf disc
+2020-07-03T03:17:54Z;I;END API

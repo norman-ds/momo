@@ -1,0 +1,56 @@
+# This is a basic workflow to download data
+
+name: Run download
+
+# Controls when the action will run. Triggers the workflow whenever 
+on:
+  schedule: # https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07
+    - cron:  '15 3 * * 2-6' # run every day (except Sunday and Monday) morning at 3:15 am
+
+# Automatically download data whenever 
+# and commits the results to the master branch.
+jobs:
+  download:
+    name: fit4data
+    runs-on: ubuntu-latest
+    container: rocker/verse:3.6.3
+    continue-on-error: false
+    timeout-minutes: 10
+    
+    env:
+      working-directory: ./R  
+    
+    steps:
+      # Checkout GitHub 'master'
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        
+      # Runing R script will expose return value on 
+      # the ${{ steps.fitdata.outputs.fitdata }} variable.
+      # (just to see what happens)
+      - name: Download data
+        id: fitdata
+        working-directory: ./R
+        run: echo "::set-output name=fitdata::$(Rscript fit_data_run.R)"
+
+      # Check return value -> ToDo: (just to see what happens)
+      - name: echo test
+        run: echo "The result was ${{ steps.fitdata.outputs.fitdata }}"
+
+      # Checking the status will expose the status on 
+      # the ${{ steps.changes.outputs.changed }} variable.
+      - name: Check if there are changes in the repo
+        id: changes
+        uses: UnicornGlobal/has-changes-action@v1.0.11
+
+      # only try to commit if there are actually changes
+      - name: Commit and push to repo
+        if: steps.changes.outputs.changed == 1 
+        uses: github-actions-x/commit@v2.6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          push-branch: 'master'
+          name: GitHub Action Download
+          email: normandev@puntaminar.ch
+          commit-message: 'Update Todesfallzahlen from scraper'
+

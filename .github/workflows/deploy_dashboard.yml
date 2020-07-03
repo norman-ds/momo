@@ -1,0 +1,92 @@
+# This is a basic workflow to deploy dashboard to gh-pages
+
+name: Deploy dashboard
+
+# Controls when the action will run. Triggers the workflow whenever 
+# the master branche changes
+on:
+  push:
+    paths:
+    - 'download/**'
+    - 'data/**'
+  schedule: # https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07
+    - cron:  '0 5 * * *' # run every day morning at 6:00 am
+
+
+# Automatically download data whenever 
+# and commits the results to the master branch.
+jobs:
+  dashboard:
+    name: render2html
+    runs-on: ubuntu-latest
+    container: rocker/verse:3.6.3
+    continue-on-error: false
+    timeout-minutes: 10
+    
+    env:
+      working-directory: ./download
+    
+    steps:
+      # Checkout GitHub 'master'
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        
+      # Install R packages
+      - name: Install Flexdashboard
+        run: Rscript -e 'install.packages("flexdashboard")'
+      - name: Install Dygraphs
+        run: Rscript -e 'install.packages("dygraphs")'
+
+      - name: Show Dir
+        run: ls -R
+        working-directory: ${{ env.working-directory }}
+        
+      # Render with rmarkdown flexdashboard 
+      - name: Render HTML
+        run: Rscript -e 'rmarkdown::render("momo.Rmd", output_file="index.html", output_dir="_book")'
+        working-directory: ${{ env.working-directory }}
+
+      # Copy json file to website
+      - name: Copy JSON
+        run: cp ./data/json.json ${{ env.working-directory }}/_book/json.json
+
+      # Upload web file to artifacts
+      - name: Upload results
+        uses: actions/upload-artifact@v2
+        with:
+          name: momo
+          path: ${{ env.working-directory }}/_book/
+          
+# For the first time, create an empty gh-pages branch
+# see https://pkgdown.r-lib.org/reference/deploy_site_github.html
+# and also add secrets for a GITHUB_PAT and EMAIL to the repository
+# gh-action from Cecilapp/GitHub-Pages-deploy
+  checkout-and-deploy:
+   runs-on: ubuntu-latest
+   needs: dashboard
+   
+   steps:
+      # Checkout GitHub 'master'
+     - name: Checkout
+       uses: actions/checkout@master
+
+      # Download web files to artifacts
+     - name: Download artifact
+       uses: actions/download-artifact@v2
+       with:
+         # Artifact name
+         name: momo # optional
+         # Destination path
+         path: _site/ # optional
+      
+     - name: Show Dir
+       run: ls -R
+         
+     # Deploy to gh-pages
+     - name: Deploy to GitHub Pages
+       uses: Cecilapp/GitHub-Pages-deploy@master
+       env:
+          EMAIL: normandev@puntaminar.ch               # must be a verified email
+          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }} # https://github.com/settings/tokens
+          BUILD_DIR: _site/                    # "_site/" by default
+

@@ -1,0 +1,64 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file  -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# MOMO
+Das Mortalitätsmonitoring (MOMO) überwacht die wöchentliche Anzahl Todesfälle in der Schweiz.
+
+<!-- badges: start -->
+![Render README](https://github.com/norman-ds/momo/workflows/Render%20README/badge.svg)
+![Run download](https://github.com/norman-ds/momo/workflows/Run%20download/badge.svg)
+![Deploy dashboard](https://github.com/norman-ds/momo/workflows/Deploy%20dashboard/badge.svg)
+<!-- badges: end -->
+
+Die Todesfälle werden täglich den Zivilstandsämtern gemeldet und dem 
+[BFS](https://www.bfs.admin.ch/bfs/de/home/statistiken/bevoelkerung/geburten-todesfaelle/todesfaelle.html)
+im Rahmen der Statistik der natürlichen 
+Bevölkerungsbewegung (BEVNAT) mitgeteilt. Der Melde- 
+und Verarbeitungsprozess dauert in der Regel neun Tage.
+
+[Mortalitäsmonitoring Schweiz](https://norman-ds.github.io/momo/) 
+
+## API
+
+Die Website bietet eine Datenübersicht und stellt die Datensätze in einer API (JSON) wieder zur Verfügung. Zusätzlich wird ein Datensatz mit den laufenden Veränderungen angeboten.
+
+## Daten
+
+Todesfälle nach Fünf-Jahres-Altersgruppe, Geschlecht, Woche und Kanton der Jahre 2000 bis 2020. Die erfassten Daten des laufenden Jahres werden automatisch täglich überprüft und auf der Homepage aktualisiert.
+
+## DevOps
+
+MOMO verfolgt einen kontinuierlichen Prozessansatz, der Softwareentwicklung und IT-Betrieb abdeckt. Alle Scripts sind in [R](https://www.r-project.org) geschrieben. Wobei für die reproduzierbare Softwareentwicklung das Kontainersystem von [Docker](https://hub.docker.com/r/rocker/verse) eingesetzt wird. Als Versionierungssystem dient [GitHub](https://help.github.com/en/actions/building-and-testing-code-with-continuous-integration), GitHub *Action* für CI/CD und GitHub *Page* als [Webserver](https://norman-ds.github.io/momo/). 
+
+Das IDE von RStudio wird in einem Docker gestartet und über den Browser darauf zugegriffen (http://localhost:8787).
+
+```yaml
+docker run --name MOMO -d -p 8787:8787 -v $(pwd):/home/rstudio -e PASSWORD=pwd rocker/verse:3.6.3
+```
+
+Das Docker Image von *rocker/verse* hat die R Version 3.6.3 und einige Packages installiert und erspart uns somit ein Nachinstallieren.
+
+```{R}
+sessionInfo()
+```
+
+
+Folgende eine Liste der wenigen verwendeten Packages (mit Version).
+
+```{R}
+libs <- c("curl","jsonlite","readr","dplyr","purrr","ggplot2","lubridate","flexdashboard","DT","dygraphs","xts")
+ip <- installed.packages(fields = c("Package", "Version"))
+ip <- ip[ip[,c("Package")] %in% libs,]
+paste(ip[,c("Package")],ip[,c("Version")])
+```
+

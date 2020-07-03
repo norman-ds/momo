@@ -1,0 +1,108 @@
+---
+title: "Mortalitätsmonitoring Schweiz"
+knit: (function(input_file, encoding) {
+  out_dir <- '_book';
+  if (!dir.exists(out_dir)) dir.create(out_dir);
+  rmarkdown::render(input_file,
+  encoding=encoding,
+  output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    social: menu
+    source_code: embed
+---
+
+```{r setup, include=FALSE}
+library(dygraphs) # needs xts
+library(dplyr)
+library(readr)
+source('../R/badgelinks.R')
+source('berestful.R')
+
+```
+
+Row
+---------------------------------------------------
+
+### Zeitreihe 2000 bis 2020
+
+```{r graph}
+# read data with dyfun and convert to timeseries
+source('momodyfun.R')
+# select sorted timeseries by canton
+ktlist <- c('CH','ZH','BE','VD','TI')
+
+dft1 <- dyfun(quos(kanton %in% ktlist))  %>%
+  count(kt,date, wt=value, name='value') %>%
+  split(.$kt)
+dft2 <- dft1[ktlist] # sort the list
+tslist <- lapply(dft2, function(x) {
+  xts::xts(x$value, order.by = x$date)
+  })
+tss <- do.call(cbind,tslist)
+dygraph(tss, main = "Todesfälle Schweiz") %>% 
+  dyOptions(stepPlot = T) %>%
+  dyHighlight(highlightCircleSize = 5, 
+              highlightSeriesBackgroundAlpha = 0.2,
+              hideOnMouseOut = FALSE) %>% 
+  dyRangeSelector(dateWindow = c("2013-07-01", as.character(last(dft1[[1]]$date)))) %>%
+  dyEvent("2020-3-17", "Lockdown", labelLoc = "bottom")
+```
+
+
+Row {.tabset .tabset-fade}
+---------------------------------------------------
+
+### Dokumentation
+
+`r badge`
+
+**Das Bundesamt für Statistik stellt wöchentlich erfasste Todesfallzahlen zur Verfügung.**
+
+Todesfälle nach Fünf-Jahres-Altersgruppe, Geschlecht, Woche und Kanton (CSV-Datei) - [opendata.swiss](https://opendata.swiss/de/dataset?q=%22Todesfälle+nach+Fünf-Jahres-Altersgruppe%22+Kanton)
+
+Die Todesfälle werden täglich den Zivilstandsämtern gemeldet und dem BFS im Rahmen der Statistik der natürlichen Bevölkerungsbewegung (BEVNAT) mitgeteilt. Der Melde- und Verarbeitungsprozess dauert in der Regel neun Tage.
+
+Die Referenzbevölkerung ist die ständige Wohnbevölkerung, d.h. die Personen mit ständigem Wohnsitz in der Schweiz. Todesfälle von Personen mit Wohnsitz in der Schweiz, die sich im Ausland ereignet haben, werden gezählt.
+
+Weitere Informationen :
+
+- Bundesamt für Statistik:  [Todesfälle](https://www.bfs.admin.ch/bfs/de/home/statistiken/bevoelkerung/geburten-todesfaelle/todesfaelle.html)
+- Bundesamt für Statistik: [Sterblichkeit, Todesursachen](https://www.bfs.admin.ch/bfs/de/home/statistiken/gesundheit/gesundheitszustand/sterblichkeit-todesursachen.html)
+- Bundesamt für Statistik: [Mortalitätsmonitoring (MOMO)](https://www.experimental.bfs.admin.ch/expstat/de/home/innovative-methoden/momo.html)
+- Weltgesundheitsorganisation (WHO): [EUROMOMO](https://www.euromomo.eu/graphs-and-maps/)
+
+
+### Todesfälle Schweiz (Sample)
+
+Todesfälle nach Fünf-Jahres-Altersgruppe, Geschlecht, Woche und Kanton (CSV-Datei)
+
+```{r data}
+read_csv2('../data/todesfaelle_woche.csv') %>%
+  top_n(10) %>%
+  knitr::kable()
+```
+
+### Wöchentlicher Nachtrag (Sample)
+
+```{r diff}
+dfdiff <- read_csv2('../data/diff.csv')
+DT::datatable(dfdiff[0:100,], class = 'cell-border stripe')
+```
+
+### Logdatei
+
+```{r log}
+mylog <- read_csv2('../data/log.csv', col_names = F) %>% purrr::map_df(rev)
+knitr::kable(mylog[0:100,], col.names = c('Datum','Status','Text'))
+```
+
+### Zusätzliche Informationen
+
+Metadatenzugriff [API (JSON)](https://norman-ds.github.io/momo/json.json) 
+
+***
+
+`r berestful()`
+
