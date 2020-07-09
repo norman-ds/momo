@@ -353,3 +353,14 @@
 2020-07-08T03:17:41Z;I;new_todesfaelle_woche.csv gelesen 16948 Zeilen und 9 Spalten
 2020-07-08T03:17:41Z;E;Daten identisch
 2020-07-08T03:17:41Z;I;END Validierung
+2020-07-09T03:17:21Z;I;START Download
+2020-07-09T03:17:22Z;I;Opendata spec lesen ...
+2020-07-09T03:17:29Z;E;Error NROW(api_res$PIVOT) == 1 is not TRUE
+2020-07-09T03:17:29Z;I;<Last_pull> badge created
+2020-07-09T03:17:29Z;I;END Download
+2020-07-09T03:17:21Z;I;START Download
+2020-07-09T03:17:22Z;I;Opendata spec lesen ...
+2020-07-09T03:17:29Z;E;Error NROW(api_res$PIVOT) == 1 is not TRUE
+2020-07-09T03:17:29Z;I;<Last_pull> badge created
+2020-07-09T03:17:29Z;I;END Download
+2020-07-09T03:17:29Z;I;END Download
