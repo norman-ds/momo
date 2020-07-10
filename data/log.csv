@@ -364,3 +364,36 @@
 2020-07-09T03:17:29Z;I;<Last_pull> badge created
 2020-07-09T03:17:29Z;I;END Download
 2020-07-09T03:17:29Z;I;END Download
+2020-07-10T03:18:37Z;I;START Download
+2020-07-10T03:18:38Z;I;Opendata spec lesen ...
+2020-07-10T03:18:42Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-07-09T01:15:30.497918
+2020-07-10T03:18:42Z;I;..API in api.csv geschrieben !
+2020-07-10T03:18:42Z;I;URL download lesen ...
+2020-07-10T03:18:42Z;W;..new_todesfaelle_woche.csv wird überschrieben !
+2020-07-10T03:18:44Z;I;..CSV in new_todesfaelle_woche.csv geschrieben !
+2020-07-10T03:18:44Z;I;<Last_pull> badge created
+2020-07-10T03:18:44Z;I;END Download
+2020-07-10T03:18:44Z;I;START Validierung
+2020-07-10T03:18:44Z;I;todesfaelle_woche.csv gelesen 16948 Zeilen und 9 Spalten
+2020-07-10T03:18:44Z;I;new_todesfaelle_woche.csv gelesen 17614 Zeilen und 9 Spalten
+2020-07-10T03:18:44Z;I;Referenztabellen erstellt ...
+2020-07-10T03:18:44Z;I;Validatortabellen erstellt ...
+2020-07-10T03:18:44Z;I;..2020 mit 1168 Todesfälle
+2020-07-10T03:18:44Z;I;..2020-W19 mit 5 Todesfälle
+2020-07-10T03:18:44Z;I;..2020-W20 mit 9 Todesfälle
+2020-07-10T03:18:44Z;I;..2020-W21 mit 4 Todesfälle
+2020-07-10T03:18:44Z;I;..2020-W22 mit 10 Todesfälle
+2020-07-10T03:18:44Z;I;..2020-W23 mit 18 Todesfälle
+2020-07-10T03:18:44Z;I;..2020-W24 mit 35 Todesfälle
+2020-07-10T03:18:44Z;I;..2020-W25 mit 51 Todesfälle
+2020-07-10T03:18:44Z;I;..2020-W26 mit 1020 Todesfälle
+2020-07-10T03:18:45Z;I;Differenzen in 440 Zeilen mit 1169 Todesfällen ..
+2020-07-10T03:18:45Z;I;..in ../data/diff.csv geschrieben !
+2020-07-10T03:18:45Z;I;../data/todesfaelle_woche.csv umbenannt in ../data/arc_todesfaelle_woche.csv
+2020-07-10T03:18:45Z;I;../data/new_todesfaelle_woche.csv umbenannt in ../data/todesfaelle_woche.csv
+2020-07-10T03:18:45Z;I;<Valdidate> badge created
+2020-07-10T03:18:45Z;I;END Validierung
+2020-07-10T03:18:45Z;I;START API
+2020-07-10T03:18:45Z;I;restful auf disc
+2020-07-10T03:18:45Z;I;badge auf disc
+2020-07-10T03:18:45Z;I;END API
