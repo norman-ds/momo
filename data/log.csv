@@ -452,3 +452,36 @@
 2020-07-16T03:18:23Z;I;new_todesfaelle_woche.csv gelesen 17614 Zeilen und 9 Spalten
 2020-07-16T03:18:23Z;E;Daten identisch
 2020-07-16T03:18:23Z;I;END Validierung
+2020-07-17T03:18:26Z;I;START Download
+2020-07-17T03:18:27Z;I;Opendata spec lesen ...
+2020-07-17T03:18:32Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-07-16T12:24:34.402187
+2020-07-17T03:18:32Z;I;..API in api.csv geschrieben !
+2020-07-17T03:18:32Z;I;URL download lesen ...
+2020-07-17T03:18:32Z;W;..new_todesfaelle_woche.csv wird überschrieben !
+2020-07-17T03:18:34Z;I;..CSV in new_todesfaelle_woche.csv geschrieben !
+2020-07-17T03:18:34Z;I;<Last_pull> badge created
+2020-07-17T03:18:34Z;I;END Download
+2020-07-17T03:18:34Z;I;START Validierung
+2020-07-17T03:18:35Z;I;todesfaelle_woche.csv gelesen 17614 Zeilen und 9 Spalten
+2020-07-17T03:18:35Z;I;new_todesfaelle_woche.csv gelesen 18283 Zeilen und 9 Spalten
+2020-07-17T03:18:35Z;I;Referenztabellen erstellt ...
+2020-07-17T03:18:35Z;I;Validatortabellen erstellt ...
+2020-07-17T03:18:35Z;I;..2020 mit 1155 Todesfälle
+2020-07-17T03:18:35Z;I;..2020-W20 mit 3 Todesfälle
+2020-07-17T03:18:35Z;I;..2020-W21 mit 6 Todesfälle
+2020-07-17T03:18:35Z;I;..2020-W22 mit 10 Todesfälle
+2020-07-17T03:18:35Z;I;..2020-W23 mit 7 Todesfälle
+2020-07-17T03:18:35Z;I;..2020-W24 mit 22 Todesfälle
+2020-07-17T03:18:35Z;I;..2020-W25 mit 45 Todesfälle
+2020-07-17T03:18:35Z;I;..2020-W26 mit 33 Todesfälle
+2020-07-17T03:18:35Z;I;..2020-W27 mit 996 Todesfälle
+2020-07-17T03:18:35Z;I;Differenzen in 436 Zeilen mit 1155 Todesfällen ..
+2020-07-17T03:18:35Z;I;..in ../data/diff.csv geschrieben !
+2020-07-17T03:18:35Z;I;../data/todesfaelle_woche.csv umbenannt in ../data/arc_todesfaelle_woche.csv
+2020-07-17T03:18:35Z;I;../data/new_todesfaelle_woche.csv umbenannt in ../data/todesfaelle_woche.csv
+2020-07-17T03:18:35Z;I;<Valdidate> badge created
+2020-07-17T03:18:35Z;I;END Validierung
+2020-07-17T03:18:35Z;I;START API
+2020-07-17T03:18:35Z;I;restful auf disc
+2020-07-17T03:18:35Z;I;badge auf disc
+2020-07-17T03:18:35Z;I;END API
