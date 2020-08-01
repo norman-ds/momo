@@ -639,3 +639,37 @@
 2020-07-31T03:20:32Z;I;<Last_pull> badge created
 2020-07-31T03:20:32Z;I;END Download
 2020-07-31T03:20:32Z;I;END Download
+2020-08-01T03:19:25Z;I;START Download
+2020-08-01T03:19:25Z;I;Opendata spec lesen ...
+2020-08-01T03:19:31Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-07-30T12:04:51.237991
+2020-08-01T03:19:31Z;I;..API in api.csv geschrieben !
+2020-08-01T03:19:31Z;I;URL download lesen ...
+2020-08-01T03:19:31Z;W;..new_todesfaelle_woche.csv wird überschrieben !
+2020-08-01T03:19:33Z;I;..CSV in new_todesfaelle_woche.csv geschrieben !
+2020-08-01T03:19:33Z;I;<Last_pull> badge created
+2020-08-01T03:19:33Z;I;END Download
+2020-08-01T03:19:33Z;I;START Validierung
+2020-08-01T03:19:33Z;I;todesfaelle_woche.csv gelesen 18938 Zeilen und 9 Spalten
+2020-08-01T03:19:33Z;I;new_todesfaelle_woche.csv gelesen 19611 Zeilen und 9 Spalten
+2020-08-01T03:19:33Z;I;Referenztabellen erstellt ...
+2020-08-01T03:19:33Z;I;Validatortabellen erstellt ...
+2020-08-01T03:19:33Z;I;..2020 mit 1209 Todesfälle
+2020-08-01T03:19:33Z;W;..2020-W06 mit -1 Todesfälle
+2020-08-01T03:19:33Z;I;..2020-W22 mit 6 Todesfälle
+2020-08-01T03:19:33Z;I;..2020-W23 mit 3 Todesfälle
+2020-08-01T03:19:33Z;I;..2020-W24 mit 6 Todesfälle
+2020-08-01T03:19:33Z;I;..2020-W25 mit 10 Todesfälle
+2020-08-01T03:19:33Z;I;..2020-W26 mit 39 Todesfälle
+2020-08-01T03:19:33Z;I;..2020-W27 mit 67 Todesfälle
+2020-08-01T03:19:33Z;I;..2020-W28 mit 69 Todesfälle
+2020-08-01T03:19:33Z;I;..2020-W29 mit 972 Todesfälle
+2020-08-01T03:19:33Z;I;Differenzen in 466 Zeilen mit 1209 Todesfällen ..
+2020-08-01T03:19:33Z;I;..in ../data/diff.csv geschrieben !
+2020-08-01T03:19:33Z;I;../data/todesfaelle_woche.csv umbenannt in ../data/arc_todesfaelle_woche.csv
+2020-08-01T03:19:33Z;I;../data/new_todesfaelle_woche.csv umbenannt in ../data/todesfaelle_woche.csv
+2020-08-01T03:19:33Z;I;<Valdidate> badge created
+2020-08-01T03:19:33Z;I;END Validierung
+2020-08-01T03:19:33Z;I;START API
+2020-08-01T03:19:33Z;I;restful auf disc
+2020-08-01T03:19:33Z;I;badge auf disc
+2020-08-01T03:19:33Z;I;END API
