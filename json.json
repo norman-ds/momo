@@ -1,11 +1,11 @@
 [
   {
     "display_name": "Deaths per week by 5-year age group, sex and canton (CSV file)",
-    "created": "2020-07-30T12:04:51.237991",
-    "download_url": "https://www.bfs.admin.ch/bfsstatic/dam/assets/13772942/master",
+    "created": "2020-08-05T16:42:57.719335",
+    "download_url": "https://www.bfs.admin.ch/bfsstatic/dam/assets/13807727/master",
     "format": "CSV",
     "start_date": "2019-12-30T01:00:00",
-    "end_date": "2020-07-19T02:00:00"
+    "end_date": "2020-07-26T02:00:00"
   },
   {
     "display_name": "Deaths per week by 5-year age group, sex and canton (CSV file)",
@@ -17,10 +17,10 @@
   },
   {
     "display_name": "Difference between downloads",
-    "created": "2020-08-01 03:19:33",
+    "created": "2020-08-06 03:20:05",
     "download_url": "https://raw.githubusercontent.com/norman-ds/momo/master/data/diff.csv",
     "format": "CSV",
     "start_date": "2017-W22",
-    "end_date": "2020-W29"
+    "end_date": "2020-W30"
   }
 ]
