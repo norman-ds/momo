@@ -835,3 +835,17 @@
 2020-08-14T03:21:27Z;I;new_todesfaelle_woche.csv gelesen 20937 Zeilen und 9 Spalten
 2020-08-14T03:21:27Z;E;Daten identisch
 2020-08-14T03:21:27Z;I;END Validierung
+2020-08-15T03:22:13Z;I;START Download
+2020-08-15T03:22:14Z;I;Opendata spec lesen ...
+2020-08-15T03:22:18Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-08-12T14:03:55.598971
+2020-08-15T03:22:18Z;I;..API in api.csv geschrieben !
+2020-08-15T03:22:18Z;I;URL download lesen ...
+2020-08-15T03:22:18Z;W;..new_todesfaelle_woche.csv wird überschrieben !
+2020-08-15T03:22:20Z;I;..CSV in new_todesfaelle_woche.csv geschrieben !
+2020-08-15T03:22:20Z;I;<Last_pull> badge created
+2020-08-15T03:22:20Z;I;END Download
+2020-08-15T03:22:20Z;I;START Validierung
+2020-08-15T03:22:21Z;I;todesfaelle_woche.csv gelesen 20937 Zeilen und 9 Spalten
+2020-08-15T03:22:21Z;I;new_todesfaelle_woche.csv gelesen 20937 Zeilen und 9 Spalten
+2020-08-15T03:22:21Z;E;Daten identisch
+2020-08-15T03:22:21Z;I;END Validierung
