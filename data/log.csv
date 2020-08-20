@@ -874,3 +874,36 @@
 2020-08-19T03:22:08Z;I;<Last_pull> badge created
 2020-08-19T03:22:08Z;I;END Download
 2020-08-19T03:22:08Z;I;END Download
+2020-08-20T03:24:09Z;I;START Download
+2020-08-20T03:24:10Z;I;Opendata spec lesen ...
+2020-08-20T03:24:15Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-08-18T20:57:24.090262
+2020-08-20T03:24:15Z;I;..API in api.csv geschrieben !
+2020-08-20T03:24:15Z;I;URL download lesen ...
+2020-08-20T03:24:15Z;W;..new_todesfaelle_woche.csv wird überschrieben !
+2020-08-20T03:24:17Z;I;..CSV in new_todesfaelle_woche.csv geschrieben !
+2020-08-20T03:24:17Z;I;<Last_pull> badge created
+2020-08-20T03:24:17Z;I;END Download
+2020-08-20T03:24:17Z;I;START Validierung
+2020-08-20T03:24:17Z;I;todesfaelle_woche.csv gelesen 20937 Zeilen und 9 Spalten
+2020-08-20T03:24:17Z;I;new_todesfaelle_woche.csv gelesen 21589 Zeilen und 9 Spalten
+2020-08-20T03:24:17Z;I;Referenztabellen erstellt ...
+2020-08-20T03:24:17Z;I;Validatortabellen erstellt ...
+2020-08-20T03:24:17Z;I;..2020 mit 1152 Todesfälle
+2020-08-20T03:24:17Z;I;..2020-W25 mit 6 Todesfälle
+2020-08-20T03:24:17Z;I;..2020-W26 mit 4 Todesfälle
+2020-08-20T03:24:17Z;I;..2020-W27 mit 5 Todesfälle
+2020-08-20T03:24:17Z;I;..2020-W28 mit 5 Todesfälle
+2020-08-20T03:24:17Z;I;..2020-W29 mit 13 Todesfälle
+2020-08-20T03:24:17Z;I;..2020-W30 mit 44 Todesfälle
+2020-08-20T03:24:17Z;I;..2020-W31 mit 51 Todesfälle
+2020-08-20T03:24:17Z;I;..2020-W32 mit 1001 Todesfälle
+2020-08-20T03:24:17Z;I;Differenzen in 416 Zeilen mit 1152 Todesfällen ..
+2020-08-20T03:24:17Z;I;..in ../data/diff.csv geschrieben !
+2020-08-20T03:24:17Z;I;../data/todesfaelle_woche.csv umbenannt in ../data/arc_todesfaelle_woche.csv
+2020-08-20T03:24:17Z;I;../data/new_todesfaelle_woche.csv umbenannt in ../data/todesfaelle_woche.csv
+2020-08-20T03:24:17Z;I;<Valdidate> badge created
+2020-08-20T03:24:17Z;I;END Validierung
+2020-08-20T03:24:17Z;I;START API
+2020-08-20T03:24:17Z;I;restful auf disc
+2020-08-20T03:24:17Z;I;badge auf disc
+2020-08-20T03:24:17Z;I;END API
