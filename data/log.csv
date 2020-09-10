@@ -1135,3 +1135,36 @@
 2020-09-09T03:25:07Z;I;new_todesfaelle_woche.csv gelesen 22857 Zeilen und 9 Spalten
 2020-09-09T03:25:07Z;E;Daten identisch
 2020-09-09T03:25:07Z;I;END Validierung
+2020-09-10T03:24:13Z;I;START Download
+2020-09-10T03:24:13Z;I;Opendata spec lesen ...
+2020-09-10T03:24:17Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-09-09T10:01:31.725455
+2020-09-10T03:24:17Z;I;..API in api.csv geschrieben !
+2020-09-10T03:24:17Z;I;URL download lesen ...
+2020-09-10T03:24:17Z;W;..new_todesfaelle_woche.csv wird überschrieben !
+2020-09-10T03:24:19Z;I;..CSV in new_todesfaelle_woche.csv geschrieben !
+2020-09-10T03:24:19Z;I;<Last_pull> badge created
+2020-09-10T03:24:19Z;I;END Download
+2020-09-10T03:24:19Z;I;START Validierung
+2020-09-10T03:24:20Z;I;todesfaelle_woche.csv gelesen 22857 Zeilen und 9 Spalten
+2020-09-10T03:24:20Z;I;new_todesfaelle_woche.csv gelesen 23560 Zeilen und 9 Spalten
+2020-09-10T03:24:20Z;I;Referenztabellen erstellt ...
+2020-09-10T03:24:20Z;I;Validatortabellen erstellt ...
+2020-09-10T03:24:20Z;I;..2020 mit 1252 Todesfälle
+2020-09-10T03:24:20Z;I;..2020-W28 mit 3 Todesfälle
+2020-09-10T03:24:20Z;I;..2020-W29 mit 5 Todesfälle
+2020-09-10T03:24:20Z;I;..2020-W30 mit 9 Todesfälle
+2020-09-10T03:24:20Z;I;..2020-W31 mit 20 Todesfälle
+2020-09-10T03:24:20Z;I;..2020-W32 mit 32 Todesfälle
+2020-09-10T03:24:20Z;I;..2020-W33 mit 48 Todesfälle
+2020-09-10T03:24:20Z;I;..2020-W34 mit 92 Todesfälle
+2020-09-10T03:24:20Z;I;..2020-W35 mit 1011 Todesfälle
+2020-09-10T03:24:20Z;I;Differenzen in 499 Zeilen mit 1252 Todesfällen ..
+2020-09-10T03:24:20Z;I;..in ../data/diff.csv geschrieben !
+2020-09-10T03:24:20Z;I;../data/todesfaelle_woche.csv umbenannt in ../data/arc_todesfaelle_woche.csv
+2020-09-10T03:24:20Z;I;../data/new_todesfaelle_woche.csv umbenannt in ../data/todesfaelle_woche.csv
+2020-09-10T03:24:20Z;I;<Valdidate> badge created
+2020-09-10T03:24:20Z;I;END Validierung
+2020-09-10T03:24:20Z;I;START API
+2020-09-10T03:24:20Z;I;restful auf disc
+2020-09-10T03:24:20Z;I;badge auf disc
+2020-09-10T03:24:20Z;I;END API
