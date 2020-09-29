@@ -1370,3 +1370,16 @@
 2020-09-26T03:25:35Z;I;restful auf disc
 2020-09-26T03:25:35Z;I;badge auf disc
 2020-09-26T03:25:35Z;I;END API
+2020-09-29T03:25:45Z;I;START Download
+2020-09-29T03:25:45Z;I;Opendata spec lesen ...
+2020-09-29T03:25:51Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-09-25T05:51:02.250736
+2020-09-29T03:25:51Z;I;..API in api.csv geschrieben !
+2020-09-29T03:25:51Z;I;URL download lesen ...
+2020-09-29T03:25:53Z;I;..CSV in new_todesfaelle_woche.csv geschrieben !
+2020-09-29T03:25:53Z;I;<Last_pull> badge created
+2020-09-29T03:25:53Z;I;END Download
+2020-09-29T03:25:53Z;I;START Validierung
+2020-09-29T03:25:54Z;I;todesfaelle_woche.csv gelesen 24911 Zeilen und 9 Spalten
+2020-09-29T03:25:54Z;I;new_todesfaelle_woche.csv gelesen 24911 Zeilen und 9 Spalten
+2020-09-29T03:25:54Z;E;Daten identisch
+2020-09-29T03:25:54Z;I;END Validierung
