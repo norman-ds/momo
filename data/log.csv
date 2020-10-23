@@ -1582,3 +1582,14 @@
 2020-10-22T03:30:07Z;I;<Last_pull> badge created
 2020-10-22T03:30:07Z;I;END Download
 2020-10-22T03:30:07Z;I;END Download
+2020-10-23T03:30:17Z;I;START Download
+2020-10-23T03:30:17Z;I;Opendata spec lesen ...
+2020-10-23T03:30:26Z;E;Error NROW(api_res$PIVOT) == 1 is not TRUE
+2020-10-23T03:30:26Z;I;<Last_pull> badge created
+2020-10-23T03:30:26Z;I;END Download
+2020-10-23T03:30:17Z;I;START Download
+2020-10-23T03:30:17Z;I;Opendata spec lesen ...
+2020-10-23T03:30:26Z;E;Error NROW(api_res$PIVOT) == 1 is not TRUE
+2020-10-23T03:30:26Z;I;<Last_pull> badge created
+2020-10-23T03:30:26Z;I;END Download
+2020-10-23T03:30:26Z;I;END Download
