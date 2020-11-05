@@ -9,7 +9,7 @@ source("opendata.R")
 # list of apis
 openlist <-plist()
 stopifnot(openlist$success)
-length(openlist$result) # [1] 7578
+length(openlist$result) # [1] 7828
 
 
 # Todesfälle
@@ -21,15 +21,19 @@ pivot.year <- 2020
 
 # give list of all apis with pivot.slug
 openlist$result[grepl(pivot.slug, openlist$result)]
+# [1] "todesfalle-nach-funf-jahres-altersgruppe-geschlecht-woche-und-kanton-csv-datei20"
+# [2] "todesfalle-nach-funf-jahres-altersgruppe-geschlecht-woche-und-kanton-csv-datei26"
+# [3] "todesfalle-nach-funf-jahres-altersgruppe-geschlecht-woche-und-kanton-csv-datei7" 
 
 # give all meta information of one api
-pshow('todesfalle-nach-funf-jahres-altersgruppe-geschlecht-woche-und-kanton-csv-datei8-1') 
+pshow('todesfalle-nach-funf-jahres-altersgruppe-geschlecht-woche-und-kanton-csv-datei26') 
 
 # give selected metadata of apis with pivot.slug
-ptable('todesfalle-nach-funf-jahres-altersgruppe-geschlecht-woche-und-kanton-csv-datei8-1') 
+ptable('todesfalle-nach-funf-jahres-altersgruppe-geschlecht-woche-und-kanton-csv-datei26') %>%
+  filter(language=='de') %>% t
 
 # give selected download urls of apis with pivot.slug
-papi('todesfalle-nach-funf-jahres-altersgruppe-geschlecht-woche-und-kanton-csv-datei8-1') 
+papi('todesfalle-nach-funf-jahres-altersgruppe-geschlecht-woche-und-kanton-csv-datei26') 
 
 # return table of metadata and api
 myapis <- apimeta(pivot.slug, pivot.formats, pivot.lang) %>%
@@ -41,4 +45,4 @@ glimpse(myapis)
 
 # select url for the pivot year
 myapis$PIVOT %>%
-  select(download_url)
+  transmute(id = substring(id,70), download_url)

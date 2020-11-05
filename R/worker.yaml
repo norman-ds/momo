@@ -1,12 +1,12 @@
 # Listes of sites for remote and serve data
 
 url:
-#  remote: "https://opendata.swiss/api/3/action/package_show?id=todesfalle-nach-funf-jahres-altersgruppe-geschlecht-woche-und-kanton-csv-datei8-1"
+#  remote: "https://opendata.swiss/api/3/action/package_show?id=todesfalle-nach-funf-jahres-altersgruppe-geschlecht-woche-und-kanton-csv-datei26"
   serve:
     - "https://raw.githubusercontent.com/norman-ds/momo/master/data/diff.csv"
 
 opendata:
-  slug: "todesf.*lle.*alter.*kanton.*csv"
+  slug: "todesf.*lle.*alter.*kanton.*csv.*26"
   formats: 
     - 'CSV'
   language: 'en'
