@@ -1692,3 +1692,36 @@
 2020-11-05T03:21:01Z;I;<Last_pull> badge created
 2020-11-05T03:21:01Z;I;END Download
 2020-11-05T03:21:01Z;I;END Download
+2020-11-06T03:21:12Z;I;START Download
+2020-11-06T03:21:12Z;I;Opendata spec lesen ...
+2020-11-06T03:21:15Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-11-03T19:08:14.644139
+2020-11-06T03:21:15Z;I;..API in api.csv geschrieben !
+2020-11-06T03:21:15Z;I;URL download lesen ...
+2020-11-06T03:21:15Z;W;..new_todesfaelle_woche.csv wird überschrieben !
+2020-11-06T03:21:17Z;I;..CSV in new_todesfaelle_woche.csv geschrieben !
+2020-11-06T03:21:17Z;I;<Last_pull> badge created
+2020-11-06T03:21:17Z;I;END Download
+2020-11-06T03:21:17Z;I;START Validierung
+2020-11-06T03:21:18Z;I;todesfaelle_woche.csv gelesen 24911 Zeilen und 9 Spalten
+2020-11-06T03:21:18Z;I;new_todesfaelle_woche.csv gelesen 29027 Zeilen und 9 Spalten
+2020-11-06T03:21:18Z;I;Referenztabellen erstellt ...
+2020-11-06T03:21:18Z;I;Validatortabellen erstellt ...
+2020-11-06T03:21:18Z;I;..2020 mit 7868 Todesfälle
+2020-11-06T03:21:18Z;I;..2020-W36 mit 115 Todesfälle
+2020-11-06T03:21:18Z;I;..2020-W37 mit 198 Todesfälle
+2020-11-06T03:21:18Z;I;..2020-W38 mit 1206 Todesfälle
+2020-11-06T03:21:18Z;I;..2020-W39 mit 1208 Todesfälle
+2020-11-06T03:21:18Z;I;..2020-W40 mit 1195 Todesfälle
+2020-11-06T03:21:18Z;I;..2020-W41 mit 1266 Todesfälle
+2020-11-06T03:21:18Z;I;..2020-W42 mit 1181 Todesfälle
+2020-11-06T03:21:18Z;I;..2020-W43 mit 1257 Todesfälle
+2020-11-06T03:21:18Z;I;Differenzen in 2331 Zeilen mit 7868 Todesfällen ..
+2020-11-06T03:21:18Z;I;..in ../data/diff.csv geschrieben !
+2020-11-06T03:21:18Z;I;../data/todesfaelle_woche.csv umbenannt in ../data/arc_todesfaelle_woche.csv
+2020-11-06T03:21:18Z;I;../data/new_todesfaelle_woche.csv umbenannt in ../data/todesfaelle_woche.csv
+2020-11-06T03:21:18Z;I;<Valdidate> badge created
+2020-11-06T03:21:18Z;I;END Validierung
+2020-11-06T03:21:18Z;I;START API
+2020-11-06T03:21:18Z;I;restful auf disc
+2020-11-06T03:21:18Z;I;badge auf disc
+2020-11-06T03:21:18Z;I;END API
