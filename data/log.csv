@@ -1766,3 +1766,20 @@
 2020-11-11T03:20:54Z;I;new_todesfaelle_woche.csv gelesen 29027 Zeilen und 9 Spalten
 2020-11-11T03:20:54Z;E;Daten identisch
 2020-11-11T03:20:54Z;I;END Validierung
+2020-11-12T03:21:22Z;I;START Download
+2020-11-12T03:21:22Z;I;Opendata spec lesen ...
+2020-11-12T03:21:24Z;W;Warning Unknown or uninitialised column: `id`.
+2020-11-12T03:21:24Z;I;URL download lesen ...
+2020-11-12T03:21:24Z;W;..new_todesfaelle_woche.csv wird überschrieben !
+2020-11-12T03:21:24Z;E;Error Argument 'url' must be string.
+2020-11-12T03:21:24Z;I;<Last_pull> badge created
+2020-11-12T03:21:24Z;I;END Download
+2020-11-12T03:21:22Z;I;START Download
+2020-11-12T03:21:22Z;I;Opendata spec lesen ...
+2020-11-12T03:21:24Z;W;Warning Unknown or uninitialised column: `id`.
+2020-11-12T03:21:24Z;I;URL download lesen ...
+2020-11-12T03:21:24Z;W;..new_todesfaelle_woche.csv wird überschrieben !
+2020-11-12T03:21:24Z;E;Error Argument 'url' must be string.
+2020-11-12T03:21:24Z;I;<Last_pull> badge created
+2020-11-12T03:21:24Z;I;END Download
+2020-11-12T03:21:24Z;I;END Download
