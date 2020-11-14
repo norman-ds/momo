@@ -6,7 +6,7 @@ url:
     - "https://raw.githubusercontent.com/norman-ds/momo/master/data/diff.csv"
 
 opendata:
-  slug: "todesf.*lle.*alter.*kanton.*csv.*26"
+  slug: "todesf.*lle.*alter.*kanton.*csv.*27"
   formats: 
     - 'CSV'
   language: 'en'
