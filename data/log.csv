@@ -1817,3 +1817,36 @@
 2020-11-14T03:23:13Z;I;<Last_pull> badge created
 2020-11-14T03:23:13Z;I;END Download
 2020-11-14T03:23:13Z;I;END Download
+2020-11-17T03:22:38Z;I;START Download
+2020-11-17T03:22:39Z;I;Opendata spec lesen ...
+2020-11-17T03:22:43Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-11-10T19:43:58.726078
+2020-11-17T03:22:43Z;I;..API in api.csv geschrieben !
+2020-11-17T03:22:43Z;I;URL download lesen ...
+2020-11-17T03:22:43Z;W;..new_todesfaelle_woche.csv wird überschrieben !
+2020-11-17T03:22:46Z;I;..CSV in new_todesfaelle_woche.csv geschrieben !
+2020-11-17T03:22:46Z;I;<Last_pull> badge created
+2020-11-17T03:22:46Z;I;END Download
+2020-11-17T03:22:46Z;I;START Validierung
+2020-11-17T03:22:46Z;I;todesfaelle_woche.csv gelesen 29027 Zeilen und 9 Spalten
+2020-11-17T03:22:46Z;I;new_todesfaelle_woche.csv gelesen 29756 Zeilen und 9 Spalten
+2020-11-17T03:22:46Z;I;Referenztabellen erstellt ...
+2020-11-17T03:22:46Z;I;Validatortabellen erstellt ...
+2020-11-17T03:22:46Z;I;..2020 mit 1736 Todesfälle
+2020-11-17T03:22:46Z;I;..2020-W37 mit 7 Todesfälle
+2020-11-17T03:22:46Z;I;..2020-W38 mit 6 Todesfälle
+2020-11-17T03:22:46Z;I;..2020-W39 mit 16 Todesfälle
+2020-11-17T03:22:46Z;I;..2020-W40 mit 12 Todesfälle
+2020-11-17T03:22:46Z;I;..2020-W41 mit 16 Todesfälle
+2020-11-17T03:22:46Z;I;..2020-W42 mit 38 Todesfälle
+2020-11-17T03:22:46Z;I;..2020-W43 mit 151 Todesfälle
+2020-11-17T03:22:46Z;I;..2020-W44 mit 1477 Todesfälle
+2020-11-17T03:22:46Z;I;Differenzen in 507 Zeilen mit 1736 Todesfällen ..
+2020-11-17T03:22:46Z;I;..in ../data/diff.csv geschrieben !
+2020-11-17T03:22:46Z;I;../data/todesfaelle_woche.csv umbenannt in ../data/arc_todesfaelle_woche.csv
+2020-11-17T03:22:46Z;I;../data/new_todesfaelle_woche.csv umbenannt in ../data/todesfaelle_woche.csv
+2020-11-17T03:22:46Z;I;<Valdidate> badge created
+2020-11-17T03:22:46Z;I;END Validierung
+2020-11-17T03:22:46Z;I;START API
+2020-11-17T03:22:46Z;I;restful auf disc
+2020-11-17T03:22:46Z;I;badge auf disc
+2020-11-17T03:22:46Z;I;END API
