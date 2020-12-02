@@ -2026,3 +2026,20 @@
 2020-12-01T03:28:42Z;I;<Last_pull> badge created
 2020-12-01T03:28:42Z;I;END Download
 2020-12-01T03:28:42Z;I;END Download
+2020-12-02T03:28:31Z;I;START Download
+2020-12-02T03:28:31Z;I;Opendata spec lesen ...
+2020-12-02T03:28:33Z;W;Warning Unknown or uninitialised column: `id`.
+2020-12-02T03:28:33Z;I;URL download lesen ...
+2020-12-02T03:28:33Z;W;..new_todesfaelle_woche.csv wird überschrieben !
+2020-12-02T03:28:33Z;E;Error Argument 'url' must be string.
+2020-12-02T03:28:33Z;I;<Last_pull> badge created
+2020-12-02T03:28:33Z;I;END Download
+2020-12-02T03:28:31Z;I;START Download
+2020-12-02T03:28:31Z;I;Opendata spec lesen ...
+2020-12-02T03:28:33Z;W;Warning Unknown or uninitialised column: `id`.
+2020-12-02T03:28:33Z;I;URL download lesen ...
+2020-12-02T03:28:33Z;W;..new_todesfaelle_woche.csv wird überschrieben !
+2020-12-02T03:28:33Z;E;Error Argument 'url' must be string.
+2020-12-02T03:28:33Z;I;<Last_pull> badge created
+2020-12-02T03:28:33Z;I;END Download
+2020-12-02T03:28:33Z;I;END Download
