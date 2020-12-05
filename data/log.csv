@@ -2077,3 +2077,40 @@
 2020-12-04T03:29:25Z;I;<Last_pull> badge created
 2020-12-04T03:29:25Z;I;END Download
 2020-12-04T03:29:25Z;I;END Download
+2020-12-05T03:29:47Z;I;START Download
+2020-12-05T03:29:47Z;I;Opendata spec lesen ...
+2020-12-05T03:29:50Z;I;. Deaths per week by 5-year age group, sex and canton (CSV file) vom 2020-12-01T21:06:51.538548
+2020-12-05T03:29:50Z;I;..API in api.csv geschrieben !
+2020-12-05T03:29:50Z;I;URL download lesen ...
+2020-12-05T03:29:50Z;W;..new_todesfaelle_woche.csv wird überschrieben !
+2020-12-05T03:29:52Z;I;..CSV in new_todesfaelle_woche.csv geschrieben !
+2020-12-05T03:29:52Z;I;<Last_pull> badge created
+2020-12-05T03:29:52Z;I;END Download
+2020-12-05T03:29:52Z;I;START Validierung
+2020-12-05T03:29:53Z;I;todesfaelle_woche.csv gelesen 30488 Zeilen und 9 Spalten
+2020-12-05T03:29:53Z;I;new_todesfaelle_woche.csv gelesen 31931 Zeilen und 9 Spalten
+2020-12-05T03:29:53Z;I;Referenztabellen erstellt ...
+2020-12-05T03:29:53Z;I;Validatortabellen erstellt ...
+2020-12-05T03:29:53Z;I;..2020 mit 4109 Todesfälle
+2020-12-05T03:29:53Z;W;..2020-W03 mit -1 Todesfälle
+2020-12-05T03:29:53Z;W;..2020-W07 mit -1 Todesfälle
+2020-12-05T03:29:53Z;W;..2020-W11 mit -1 Todesfälle
+2020-12-05T03:29:53Z;W;..2020-W30 mit -1 Todesfälle
+2020-12-05T03:29:53Z;I;..2020-W40 mit 7 Todesfälle
+2020-12-05T03:29:53Z;I;..2020-W41 mit 15 Todesfälle
+2020-12-05T03:29:53Z;I;..2020-W42 mit 11 Todesfälle
+2020-12-05T03:29:53Z;I;..2020-W43 mit 16 Todesfälle
+2020-12-05T03:29:53Z;I;..2020-W44 mit 43 Todesfälle
+2020-12-05T03:29:53Z;I;..2020-W45 mit 214 Todesfälle
+2020-12-05T03:29:53Z;W;..2020-W46 mit 1935 Todesfälle
+2020-12-05T03:29:53Z;W;..2020-W47 mit 1802 Todesfälle
+2020-12-05T03:29:53Z;I;Differenzen in 948 Zeilen mit 4110 Todesfällen ..
+2020-12-05T03:29:53Z;I;..in ../data/diff.csv geschrieben !
+2020-12-05T03:29:53Z;I;../data/todesfaelle_woche.csv umbenannt in ../data/arc_todesfaelle_woche.csv
+2020-12-05T03:29:53Z;I;../data/new_todesfaelle_woche.csv umbenannt in ../data/todesfaelle_woche.csv
+2020-12-05T03:29:53Z;I;<Valdidate> badge created
+2020-12-05T03:29:53Z;I;END Validierung
+2020-12-05T03:29:53Z;I;START API
+2020-12-05T03:29:53Z;I;restful auf disc
+2020-12-05T03:29:53Z;I;badge auf disc
+2020-12-05T03:29:53Z;I;END API
