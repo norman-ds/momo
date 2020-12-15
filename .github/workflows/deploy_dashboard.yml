@@ -6,12 +6,8 @@ name: Deploy dashboard
 # the master branche changes
 on:
   push:
-    paths:
-    - 'download/**'
-    - 'data/**'
-  schedule: # https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07
-    - cron:  '0 5 * * *' # run every day morning at 6:00 am
-
+    branches: 
+      - master
 
 # Automatically download data whenever 
 # and commits the results to the master branch.
@@ -84,9 +80,10 @@ jobs:
          
      # Deploy to gh-pages
      - name: Deploy to GitHub Pages
-       uses: Cecilapp/GitHub-Pages-deploy@master
+       uses: Cecilapp/GitHub-Pages-deploy@v3
        env:
-          EMAIL: normandev@puntaminar.ch               # must be a verified email
-          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }} # https://github.com/settings/tokens
-          BUILD_DIR: _site/                    # "_site/" by default
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # https://github.com/settings/tokens
+       with:  
+          email: normandev@puntaminar.ch               # must be a verified email
+          build_dir: _site/                    # "_site/" by default
 
