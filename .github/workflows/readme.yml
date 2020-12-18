@@ -5,7 +5,7 @@ name: Render2README
 # Controls when the action will run. Triggers the workflow whenever 
 on:
   schedule: # https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07
-    - cron:  '0 5 * * *' # run every day (except Sunday and Monday) morning at 5:00 am
+    - cron:  '0 5 * * *' # run every day morning at 5:00 am
 
 # Automatically re-builds this README.md from README.Rmd whenever 
 # and commits the results to the master branch.

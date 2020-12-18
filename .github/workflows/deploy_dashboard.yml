@@ -8,6 +8,8 @@ on:
   push:
     branches: 
       - master
+  schedule: # https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07
+    - cron:  '0 4 * * *' # run every day morning at 04:00 am
 
 # Automatically download data whenever 
 # and commits the results to the master branch.
