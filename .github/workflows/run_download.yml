@@ -4,6 +4,9 @@ name: Run download
 
 # Controls when the action will run. Triggers the workflow whenever 
 on:
+  push:
+    paths: 
+      - 'R/worker.yaml'
   schedule: # https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07
     - cron:  '15 3 * * 2-6' # run every day (except Sunday and Monday) morning at 3:15 am
 
