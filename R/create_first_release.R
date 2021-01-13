@@ -54,8 +54,13 @@ stopifnot(weeksnum*length(vogeo) == dim(df_reg)[1])
   mutate(AGE = '_T', SEX = 'T', Obs_status = 'P', Obs_value=VALUE) %>%
   mutate(YEAR=gsub('^(.{4}).*','\\1',TIME_PERIOD), 
          CW=gsub('.*(.{2})$','\\1',TIME_PERIOD)) %>%
-select(TIME_PERIOD, GEO, AGE, SEX, Obs_status, Obs_value, YEAR, CW, VALUE))
+select(TIME_PERIOD, GEO, AGE, SEX, Obs_status, Obs_value))
 
 
 readr::write_csv2(df_fini, filewrite)
 stopifnot(file.exists(filewrite))
+
+# test if file readable
+source('fileread.R')
+fileread(filewrite)
+fileread(filewrite) %>% summarise(min(TIME_PERIOD), max(TIME_PERIOD))
