@@ -9,8 +9,11 @@ weekmax <- '2020-W53'
 vogeo <- c('CH011', 'CH021', 'CH040', 'CH070')
 
 # File of differences
-difffile <- file.path('..', 'data', 'diff.csv')
-stopifnot(file.exists(difffile))
+#difffile <- file.path('..', 'data', 'diff.csv')
+#stopifnot(file.exists(difffile))
+diffurl <- 'https://raw.githubusercontent.com/norman-ds/momo/master/data/diff.csv'
+difffile <- tempfile()
+curl::curl_download(diffurl, difffile)
 
 # File of first release
 filewrite <- file.path('..','data', 'firstrelease.csv')
@@ -27,11 +30,11 @@ glimpse(df)
 df_ch <- df %>%
   group_by(TIMESTAMP,TIME_PERIOD) %>%
   summarise(old = sum(old), neu = sum(neu), diff = sum(diff)) %>%
-  filter(old==0 & diff>10) %>%
+  filter(old==0 & diff>5) %>%
   select(TIMESTAMP, TIME_PERIOD, VALUE=neu) %>%
   ungroup()
 stopifnot(all(count(df_ch, TIME_PERIOD)$n==1))
-stopifnot(all(df_ch$VALUE>500))
+stopifnot(all(df_ch$VALUE>1000))
 weeksnum <- dim(df_ch)[1]
 
 # Dataframe per regions
@@ -43,7 +46,7 @@ df_reg <- df %>%
   select(TIMESTAMP, TIME_PERIOD, GEO, VALUE=neu) %>%
   ungroup()
 stopifnot(all(count(df_reg, TIME_PERIOD, GEO)$n==1))
-stopifnot(all(df_reg$VALUE>10))
+stopifnot(all(df_reg$VALUE>5))
 stopifnot(weeksnum*length(vogeo) == dim(df_reg)[1])
 
 # Write file
