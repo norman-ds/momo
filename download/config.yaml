@@ -5,7 +5,6 @@ outputpath : public
 mainfile : main.Rmd
 tmpdir : publictmp
 
-
 # Download
 net:
  path : net
