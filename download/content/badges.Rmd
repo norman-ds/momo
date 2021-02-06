@@ -1,0 +1,24 @@
+
+```{r}
+source("R/badge.R", local = T)
+
+status1 <- function() {
+  status <- ''
+  if ('json'%in% names(anybox$get())) {
+    if (length(anybox$get()$json)==3) status <- 'I'
+    else status <- 'W'
+  } else status <- 'E'
+  return(status)
+}
+status2 <- function() {
+  status <- ''
+  if ('validate'%in% names(anybox$get())) {
+    if (all(anybox$get()$validate$urlexist)) status <- 'I'
+    else status <- 'W'
+  } else status <- 'E'
+  return(status)
+}
+cat(badge('Last download', format(Sys.time(), '%Y-%b-%d'), status1()))
+cat(badge('Last validate', format(Sys.time(), '%Y-%b-%d'), status2()))
+```
+

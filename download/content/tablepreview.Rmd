@@ -1,0 +1,12 @@
+### Todesfälle Schweiz (Sample)
+
+Todesfälle nach Fünf-Jahres-Altersgruppe, Geschlecht, Woche und Kanton (CSV-Datei)
+
+```{r data}
+source('R/fileread.R', local = T)
+
+config_all$filepath('datafile') %>% 
+  fileread() %>%
+  sample_n(10) %>%
+  knitr::kable()
+```

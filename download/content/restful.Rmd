@@ -1,0 +1,11 @@
+### Download
+
+Metadatenzugriff [API (JSON)](json) 
+
+***
+
+```{r, results='asis'}
+source('R/berestful.R', local = T)
+berestful(config_all$filepath('restfile')) %>% cat
+```
+

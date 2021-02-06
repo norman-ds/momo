@@ -1,0 +1,54 @@
+---
+title: "Mortalitätsmonitoring Schweiz"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    social: menu
+    source_code: embed
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(readr)
+
+#knitr::opts_knit$set(root.dir='.')
+```
+
+Row {data-height=400}
+---------------------------------------------------
+
+```{r timeline, child='content/timeseries.Rmd'}
+```
+```{r timeline, child='content/timeseries_mobile.Rmd'}
+```
+
+
+Row {data-height=40}
+---------------------------------------------------
+
+![](https://github.com/norman-ds/momo/workflows/Deploy%20dashboard/badge.svg)
+```{r badge, child='content/badges.Rmd', results='asis'}
+```
+
+Row {data-height=560 .tabset .tabset-fade}
+---------------------------------------------------
+
+```{r release, child='content/firstrelease.Rmd'}
+```
+
+
+```{r data, child='content/tablepreview.Rmd'}
+```
+
+
+```{r info, child='content/information.Rmd'}
+```
+
+
+```{r event, child='content/eventlog.Rmd'}
+```
+
+
+```{r rest, child='content/restful.Rmd'}
+```
+

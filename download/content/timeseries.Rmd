@@ -1,0 +1,32 @@
+### Zeitreihe 2000 bis 2020
+
+```{r graph}
+library(dygraphs) # needs xts
+
+# read data with dyfun and convert to timeseries
+source('R/momodyfun.R', local = T)
+dft1 <- dyfun(quos(geo %in% config_all$data$geofilter))  %>%
+    count(kt,date, wt=value, name='value') %>%
+    split(.$kt)
+
+  
+  # select sorted timeseries by canton
+ktlist <- map(dft1, ~ sum(.x$value)) %>% unlist %>% sort(T) %>% names()
+dft2 <- dft1[ktlist] # sort the list
+
+# create timeserie
+tslist <- lapply(dft2, function(x) {
+  xts::xts(x$value, order.by = x$date)
+})
+tss <- do.call(cbind, tslist)
+
+dygraph(tss, main = "Todesfälle Schweiz") %>%
+  dyOptions(stepPlot = T) %>%
+  dyHighlight(
+    highlightCircleSize = 5,
+    highlightSeriesBackgroundAlpha = 0.2,
+    hideOnMouseOut = FALSE
+  ) %>%
+  dyRangeSelector(dateWindow = c("2013-07-01", as.character(last(dft1[[1]]$date)))) %>%
+  dyEvent("2020-3-17", "Lockdown", labelLoc = "bottom")
+```

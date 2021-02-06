@@ -1,0 +1,49 @@
+--- 
+dateformat : "%Y-%m-%dT%H:%M:%S"
+geofilter : [CH, CH011, CH021, CH040, CH070]
+outputpath : public
+mainfile : main.Rmd
+tmpdir : publictmp
+
+
+# Download
+net:
+ path : net
+ format : json
+ urlPackagelist : https://opendata.swiss/api/3/action/package_list
+ pattern : "todesf.*lle.*alter.*kanton.*csv"
+ urlPackage : https://opendata.swiss/api/3/action/package_show
+ datafile : deathdata.csv
+ 
+# Build data
+build:
+ path : build
+ releasefile : releasefile.csv
+ releaseweeks : 2
+
+restapi:
+ path : rest
+ restfile : json
+
+# Static data
+static:
+ path : static
+ earlydata : "ts-q-01.04.02.01.30.csv"
+ metadata : "ts-q-01.04.02.01.30-APPENDIX.xlsx"
+ refdatageo : "grossregionCH.csv"
+ imagerelease : "firstrelease.png"
+ staticlog : "eventlog.csv"
+
+# Content
+content:
+ path : content
+
+# Public
+public:
+ path : public
+ 
+# Event
+events:
+ path : events
+ eventsfile : "eventlog.csv"
+

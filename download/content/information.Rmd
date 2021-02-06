@@ -1,0 +1,18 @@
+### Dokumentation
+
+**Das Bundesamt für Statistik stellt wöchentlich erfasste Todesfallzahlen zur Verfügung.**
+
+Todesfälle nach Fünf-Jahres-Altersgruppe, Geschlecht, Woche und Kanton (CSV-Datei) - [opendata.swiss](https://opendata.swiss/de/dataset?q=%22Todesfälle+nach+Fünf-Jahres-Altersgruppe%22+Kanton)
+
+>Die Todesfälle werden täglich den Zivilstandsämtern gemeldet und dem BFS im Rahmen der Statistik der natürlichen Bevölkerungsbewegung (BEVNAT) mitgeteilt. Der Melde- und Verarbeitungsprozess braucht Zeit. In der Regel ist nach **neun Tagen** ein genügend grosser Anteil (> 85%) der Todesfälle registriert, so dass die Schätzung der tatsächlichen Zahl der Todesfälle auf einer breiten Datenbasismöglich ist. Beachte [regionale Strukturen](#nachtrag) der Kantone.
+
+
+Die Referenzbevölkerung ist die ständige Wohnbevölkerung, d.h. die Personen mit ständigem Wohnsitz in der Schweiz. Todesfälle von Personen mit Wohnsitz in der Schweiz, die sich im Ausland ereignet haben, werden gezählt.
+
+Weitere Informationen :
+
+- Bundesamt für Statistik:  [Todesfälle](https://www.bfs.admin.ch/bfs/de/home/statistiken/bevoelkerung/geburten-todesfaelle/todesfaelle.html)
+- Bundesamt für Statistik: [Sterblichkeit, Todesursachen](https://www.bfs.admin.ch/bfs/de/home/statistiken/gesundheit/gesundheitszustand/sterblichkeit-todesursachen.html)
+- Bundesamt für Statistik: [Mortalitätsmonitoring (MOMO)](https://www.experimental.bfs.admin.ch/expstat/de/home/innovative-methoden/momo.html)
+- Weltgesundheitsorganisation (WHO): [EUROMOMO](https://www.euromomo.eu/graphs-and-maps/)
+

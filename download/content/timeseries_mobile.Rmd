@@ -1,0 +1,32 @@
+### Zeitreihe 2000 bis 2020 {.mobile}
+
+```{r graph_mobile}
+# read data with dyfun and convert to timeseries
+source('R/momodyfun.R', local = T)
+dft0 <- dyfun(quos(geo %in% config_all$data$geofilter))  %>%
+  group_by(date, kt) %>%
+  summarise(value = sum(value)) %>%
+  ungroup %>%
+  select(week=date, kanton=kt, value) 
+
+  # select sorted timeseries by canton
+#ktlist <- map(dft0, ~ sum(.x$value)) %>% unlist %>% sort(T) %>% names()
+ktlist <- filter(dft0, format(week,'%Y') == '2020') %>%
+  count(kanton, wt=value, sort = T) %>% 
+  pull(kanton)
+dft0$kanton = factor(dft0$kanton, levels=ktlist)
+
+titlelab <- 'Wöchentlich erfasste Todesfälle'
+subtitel <- 'Quelle: BFS - Todesursachenstatistik'
+
+p <- ggplot(dft0, aes(x=week, y=value)) +
+  geom_line() + 
+  facet_grid(kanton ~ ., scales="free_y") +
+  theme_minimal() +
+  scale_y_continuous(breaks=NULL) +
+  ggtitle(titlelab, subtitel) +
+  ylab(NULL) +
+  xlab('') 
+
+p
+```

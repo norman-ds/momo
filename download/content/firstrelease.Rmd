@@ -1,0 +1,4 @@
+### Regionale Strukturen {#nachtrag}
+
+![Wöchentlich erfasste Todesfälle 2020 für die Schweiz und die Kantone Tessin, Zürich, Bern und Waadt. Meldungen in zwei Klassen:  Meldungen innerhalb 9 Tagen (grau) und Nachtrag nach 9 Tagen (blau). ](`r config_all$filepath("imagerelease")`)
+
