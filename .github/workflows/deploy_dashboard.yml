@@ -1,0 +1,85 @@
+# This is a basic workflow to deploy dashboard to gh-pages
+
+name: Deploy dashboard
+
+# Controls when the action will run. Triggers the workflow whenever 
+# the master branche changes
+on:
+  push:
+    paths: 
+      - 'download/**'
+  schedule: # https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07
+    - cron:  '0 4 * * *' # run every day morning at 04:00 am
+
+# Automatically download data whenever 
+# and commits the results to the master branch.
+jobs:
+  dashboard:
+    name: render2html
+    runs-on: ubuntu-latest
+    container: rocker/verse:3.6.3
+    continue-on-error: false
+    timeout-minutes: 10
+    
+    env:
+      working-directory: ./download
+    
+    steps:
+      # Checkout GitHub 'main'
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        
+      # Install R packages
+      - name: Install Flexdashboard
+        run: Rscript -e 'install.packages("flexdashboard")'
+      - name: Install Dygraphs
+        run: Rscript -e 'install.packages("dygraphs")'
+      - name: Install Curl
+        run: Rscript -e 'install.packages("RCurl")'
+
+      # Render with rmarkdown flexdashboard 
+      - name: Render HTML
+        run: Rscript ./R/build_site.R
+        working-directory: ${{ env.working-directory }}
+
+      # Upload web file to artifacts
+      - name: Upload results
+        uses: actions/upload-artifact@v2
+        with:
+          name: momo
+          path: ${{ env.working-directory }}/public/
+          
+# For the first time, create an empty gh-pages branch
+# see https://pkgdown.r-lib.org/reference/deploy_site_github.html
+# and also add secrets for a GITHUB_PAT and EMAIL to the repository
+# gh-action from Cecilapp/GitHub-Pages-deploy
+  checkout-and-deploy:
+   runs-on: ubuntu-latest
+   needs: dashboard
+   
+   steps:
+      # Checkout GitHub 'master'
+     - name: Checkout
+       uses: actions/checkout@main
+
+      # Download web files to artifacts
+     - name: Download artifact
+       uses: actions/download-artifact@v2
+       with:
+         # Artifact name
+         name: momo # optional
+         # Destination path
+         path: _site/ # optional
+      
+     - name: Show Dir
+       run: ls -R
+         
+     # Deploy to gh-pages
+     - name: Deploy to GitHub Pages
+       uses: Cecilapp/GitHub-Pages-deploy@v3
+       env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # https://github.com/settings/tokens
+       with:  
+          email: normandev@puntaminar.ch               # must be a verified email
+          build_dir: _site/                    # "_site/" by default
+

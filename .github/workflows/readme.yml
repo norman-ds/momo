@@ -1,0 +1,43 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Render2README
+
+# Controls when the action will run. Triggers the workflow whenever 
+on:
+  schedule: # https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07
+    - cron:  '0 5 * * *' # run every day morning at 5:00 am
+
+# Automatically re-builds this README.md from README.Rmd whenever 
+# and commits the results to the master branch.
+jobs:
+  render:
+    name: Render2README
+    runs-on: ubuntu-latest
+    container: rocker/verse:3.6.3
+    continue-on-error: false
+    timeout-minutes: 10
+    
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        
+      - name: Render README
+        run: Rscript -e 'rmarkdown::render("README.Rmd")'
+        
+      # Checking the status will expose the status on the ${{ steps.changes.outputs.changed }} variable.
+      - name: Check if there are changes in the repo
+        id: changes
+        uses: UnicornGlobal/has-changes-action@v1.0.11
+
+      # only try to commit if there are actually changes
+      - name: Commit and push to repo
+        if: steps.changes.outputs.changed == 1 
+        uses: github-actions-x/commit@v2.6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          force-add: 'true'
+          files: README.md
+          push-branch: 'master'
+          name: GitHub Action Render README
+          email: normandev@puntaminar.ch
+          commit-message: 'Re-build README.Rmd'
