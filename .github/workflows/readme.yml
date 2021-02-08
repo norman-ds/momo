@@ -37,7 +37,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           force-add: 'true'
           files: README.md
-          push-branch: 'master'
+          push-branch: 'main'
           name: GitHub Action Render README
           email: normandev@puntaminar.ch
           commit-message: 'Re-build README.Rmd'
