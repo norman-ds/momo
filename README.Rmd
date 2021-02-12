@@ -50,8 +50,7 @@ Das Docker Image von *rocker/verse* hat die R Version 3.6.3 und einige Packages 
 sessionInfo()
 ```
 
-
-Folgende eine Liste der wenigen verwendeten Packages (mit Version).
+Die Versions-Liste der verwendeten R-Packages.
 
 ```{R}
 libs <- c("RCurl","jsonlite","readr","dplyr","purrr","ggplot2","lubridate","flexdashboard","DT","dygraphs","xts")
