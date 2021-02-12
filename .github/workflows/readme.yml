@@ -21,6 +21,14 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
         
+      # Install R packages
+      - name: Install Flexdashboard
+        run: Rscript -e 'install.packages("flexdashboard")'
+      - name: Install Dygraphs
+        run: Rscript -e 'install.packages("dygraphs")'
+      - name: Install Curl
+        run: Rscript -e 'install.packages("RCurl")'
+        
       - name: Render README
         run: Rscript -e 'rmarkdown::render("README.Rmd")'
         
