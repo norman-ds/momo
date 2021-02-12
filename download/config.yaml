@@ -1,6 +1,6 @@
 --- 
 dateformat : "%Y-%m-%dT%H:%M:%S"
-geofilter : [CH, CH011, CH021, CH040, CH070]
+geofilter : [CH, CH011, CH021, CH040, CH070 ]
 outputpath : public
 mainfile : main.Rmd
 tmpdir : publictmp
