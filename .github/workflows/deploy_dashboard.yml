@@ -42,6 +42,23 @@ jobs:
         run: Rscript ./R/build_site.R
         working-directory: ${{ env.working-directory }}
 
+      # Checking the status will expose the status on 
+      # the ${{ steps.changes.outputs.changed }} variable.
+      - name: Check if there are changes in the repo
+        id: changes
+        uses: UnicornGlobal/has-changes-action@v1.0.11
+
+      # only try to commit if there are actually changes
+      - name: Commit and push to repo
+        if: steps.changes.outputs.changed == 1 
+        uses: github-actions-x/commit@v2.6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          push-branch: 'main'
+          name: GitHub Action Download
+          email: normandev@puntaminar.ch
+          commit-message: 'Update Todesfallzahlen from scraper'
+
       # Upload web file to artifacts
       - name: Upload results
         uses: actions/upload-artifact@v2
