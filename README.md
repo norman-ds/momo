@@ -87,14 +87,16 @@ sessionInfo()
 #> [13] rlang_0.4.5     evaluate_0.14
 ```
 
-Folgende eine Liste der wenigen verwendeten Packages (mit
-Version).
+Die Versions-Liste der verwendeten
+R-Packages.
 
 ``` r
 libs <- c("RCurl","jsonlite","readr","dplyr","purrr","ggplot2","lubridate","flexdashboard","DT","dygraphs","xts")
 ip <- installed.packages(fields = c("Package", "Version"))
 ip <- ip[ip[,c("Package")] %in% libs,]
 paste(ip[,c("Package")],ip[,c("Version")])
-#> [1] "dplyr 0.8.5"     "DT 0.13"         "ggplot2 3.3.0"   "jsonlite 1.6.1" 
-#> [5] "lubridate 1.7.8" "purrr 0.3.4"     "readr 1.3.1"
+#>  [1] "dplyr 0.8.5"           "DT 0.13"               "dygraphs 1.1.1.6"     
+#>  [4] "flexdashboard 0.5.1.1" "ggplot2 3.3.0"         "jsonlite 1.6.1"       
+#>  [7] "lubridate 1.7.8"       "purrr 0.3.4"           "RCurl 1.98-1.2"       
+#> [10] "readr 1.3.1"           "xts 0.12-0"
 ```
