@@ -1,4 +1,4 @@
-build_restapi <- function() {
+ibuild_restapi <- function() {
 
   source('R/opendatajsonwrapper.R', local = T)
   source('R/restful.R', local = T)
@@ -22,7 +22,7 @@ build_restapi <- function() {
          format = 'CSV',
          start_date = as.Date(jfile$temporals$start_date, format="%Y-%m-%d"),
          end_date = as.Date(jfile$temporals$end_date, format="%Y-%m-%d"),
-         download_url = jfile$resources$download_url[jfile$resources$format=='CSV'])
+         download_url = jfile$resources$download_url[jfile$resources$media_type=='text/csv'])
   }
   
   # create a dataframe of file, url and dates
