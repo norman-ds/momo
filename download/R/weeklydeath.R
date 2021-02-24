@@ -3,7 +3,7 @@
 pivotfile <- function(jfile) {
   list(start_date = as.Date(jfile$temporals$start_date, format="%Y-%m-%d"),
        end_date = as.Date(jfile$temporals$end_date, format="%Y-%m-%d"),
-       url = jfile$resources$download_url[jfile$resources$format=='CSV'])
+       url = jfile$resources$download_url[jfile$resources$media_type=='text/csv'])
 }
 
 # create a dataframe of file, url and dates
