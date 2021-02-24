@@ -1,4 +1,4 @@
-ibuild_restapi <- function() {
+build_restapi <- function() {
 
   source('R/opendatajsonwrapper.R', local = T)
   source('R/restful.R', local = T)
