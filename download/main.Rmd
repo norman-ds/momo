@@ -5,11 +5,11 @@ date: "`r Sys.Date()`"
 output: 
   flexdashboard::flex_dashboard:
     navbar: 
-    - {title: "Bericht 1", href: "https://norman-ds.gitlab.io/report-momo/", align: left}
+    - {title: "Externer Bericht", href: "https://norman-ds.gitlab.io/report-momo/", align: left}
     orientation: rows
     social: menu
     source_code: "https://github.com/norman-ds/momo"
-    theme: spacelab
+    theme: cosmo
 ---
 
 Die Todesfälle werden täglich den Zivilstandsämtern gemeldet und dem BFS im Rahmen der Statistik der natürlichen Bevölkerungsbewegung (BEVNAT) mitgeteilt. Der Melde- und Verarbeitungsprozess braucht Zeit und hängt von regionalen Strukturen ab.
