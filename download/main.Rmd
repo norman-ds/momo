@@ -8,7 +8,7 @@ output:
     - {title: "Externer Bericht", href: "https://norman-ds.gitlab.io/report-momo/", align: left}
     orientation: rows
     social: menu
-    source_code: "https://github.com/norman-ds/momo"
+    source_code: "https://github.com/norman-ds/momo/#readme"
     theme: cosmo
 ---
 
