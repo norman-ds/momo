@@ -2,17 +2,20 @@
 
 name: Deploy dashboard
 
-# Controls when the action will run. Triggers the workflow whenever 
-# the master branche changes
 on:
+  # Trigger the workflow on push request,
+  # but only for the directory download in the main branch,
+  # and additionally every Wednesday morning
   push:
+    branches:
+      - main
     paths: 
       - 'download/**'
-  schedule: # https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07
-    - cron:  '0 4 * * *' # run every day morning at 04:00 am
+  schedule: # https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events
+    - cron:  '0 4 * * 3' # run every WED morning at 04:00 am
 
 # Automatically download data whenever 
-# and commits the results to the master branch.
+# and commits the results to the main branch.
 jobs:
   dashboard:
     name: render2html
@@ -37,7 +40,7 @@ jobs:
       - name: Install Curl
         run: Rscript -e 'install.packages("RCurl")'
 
-      # Render with rmarkdown flexdashboard 
+      # Render with rmarkdown  
       - name: Render HTML
         run: Rscript ./R/build_site.R
         working-directory: ${{ env.working-directory }}

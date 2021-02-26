@@ -2,13 +2,13 @@
 
 name: Render2README
 
-# Controls when the action will run. Triggers the workflow whenever 
+# Runs your workflow anytime someone pushes to a GitHub 
+# Pages-enabled branch, which triggers the page_build event.
 on:
-  schedule: # https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07
-    - cron:  '0 5 * * *' # run every day morning at 5:00 am
+  page_build
 
 # Automatically re-builds this README.md from README.Rmd whenever 
-# and commits the results to the master branch.
+# and commits the results to the main branch.
 jobs:
   render:
     name: Render2README
