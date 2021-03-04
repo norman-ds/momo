@@ -12,7 +12,7 @@ on:
  #   paths: 
  #     - 'download/**'
   schedule: # https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events
-    - cron:  '0 4 * * 3' # run every WED morning at 04:00 am
+    - cron:  '0 4 * * *' # run every  morning at 04:00 am
 
 # Automatically download data whenever 
 # and commits the results to the main branch.
