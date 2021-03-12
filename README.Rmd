@@ -15,8 +15,6 @@ knitr::opts_chunk$set(
 Das Mortalitätsmonitoring (MOMO) überwacht die wöchentliche Anzahl Todesfälle in der Schweiz.
 
 <!-- badges: start -->
-![Render README](https://github.com/norman-ds/momo/workflows/Render%20README/badge.svg)
-![Run download](https://github.com/norman-ds/momo/workflows/Run%20download/badge.svg)
 ![Deploy dashboard](https://github.com/norman-ds/momo/workflows/Deploy%20dashboard/badge.svg)
 <!-- badges: end -->
 
