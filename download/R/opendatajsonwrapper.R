@@ -1,4 +1,5 @@
 # dig data in opendata json file
+# library(jsonlite::fromJSON)
 
 # return value is a list of lists
 jwrapper <- function(jfile) {

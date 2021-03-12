@@ -36,7 +36,8 @@ Todesfälle nach Fünf-Jahres-Altersgruppe, Geschlecht, Woche und Kanton der Jah
 
 ## DevOps
 
-MOMO verfolgt einen kontinuierlichen Prozessansatz, der Softwareentwicklung und IT-Betrieb abdeckt. Alle Scripts sind in [R](https://www.r-project.org) geschrieben. Wobei für die reproduzierbare Softwareentwicklung das Kontainersystem von [Docker](https://hub.docker.com/r/rocker/verse) eingesetzt wird. Als Versionierungssystem dient [GitHub](https://help.github.com/en/actions/building-and-testing-code-with-continuous-integration), GitHub *Action* für CI/CD und GitHub *Page* als [Webserver](https://norman-ds.github.io/momo/). 
+MOMO verfolgt einen kontinuierlichen Prozessansatz, der Softwareentwicklung und IT-Betrieb abdeckt. Alle Scripts sind in [R](https://www.r-project.org) geschrieben. Wobei für die reproduzierbare Softwareentwicklung das Kontainersystem von [Docker](https://hub.docker.com/r/rocker/verse) eingesetzt wird. Als Versionierungssystem dient [GitHub](https://help.github.com/en/actions/building-and-testing-code-with-continuous-integration), GitHub *Action* für CI/CD und GitHub *Page* als [Webserver](https://norman-ds.github.io/momo/). Das Dashboard ist ein
+HTMLwidget und verlangt serverseitig nur einen Standard Webserver.
 
 Das IDE von RStudio wird in einem Docker gestartet und über den Browser darauf zugegriffen (http://localhost:8787).
 
@@ -53,7 +54,7 @@ sessionInfo()
 Die Versions-Liste der verwendeten R-Packages.
 
 ```{R}
-libs <- c("RCurl","jsonlite","readr","dplyr","purrr","ggplot2","lubridate","flexdashboard","DT","dygraphs","xts")
+libs <- c("RCurl","curl","jsonlite","readr","dplyr","purrr","ggplot2","lubridate","flexdashboard","DT","dygraphs","xts")
 ip <- installed.packages(fields = c("Package", "Version"))
 ip <- ip[ip[,c("Package")] %in% libs,]
 paste(ip[,c("Package")],ip[,c("Version")])

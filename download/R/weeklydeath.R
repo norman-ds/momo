@@ -1,3 +1,5 @@
+# library(curl::curl_download)
+# library(RCurl::url.exists)
 
 # function of selected fieldes out of json file
 pivotfile <- function(jfile) {

@@ -18,7 +18,8 @@ dyfun <- function(regiofilter) {
   dfdeath <-   purrr::map_dfr(
     list(config_all$filepath('earlydata'), config_all$filepath('datafile')), 
     ~ readr::read_delim(., delim = ';',
-                        col_types = cols(.default = col_character()))
+                        col_types = cols(.default = col_character())) %>%
+      rename_all(toupper)
     ) %>%
     # delete total in class age, delete the column sex
     filter(AGE != '_T', SEX=='T') %>%
@@ -33,7 +34,7 @@ dyfun <- function(regiofilter) {
                                 labels = c("0-64", "65-79", "80+")))) %>%
     # aggregate observations
     group_by(geo=GEO, year, cw, age) %>%
-      summarise(value=sum(as.double(Obs_value))) %>%
+      summarise(value=sum(as.double(OBS_VALUE))) %>%
     # build a yearly cummulativ sum 
     group_by(geo, year, age) %>%
      mutate(value_cum = cumsum(value)) %>%

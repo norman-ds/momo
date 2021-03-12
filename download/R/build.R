@@ -26,18 +26,7 @@ build_build <- function() {
   
   stopifnot(file.exists(releasefile))
   
-  ##########################
-  # build timeserie
   
-  # config_all$filepath('earlydata') %>%
-  #   fileread() %>%
-  #   bind_rows(datafile, .id = 'file') %>%
-  #   filter(AGE == '_T' & SEX == 'T') %>%
-  #   filter(GEO %in% config_all$data$geofilter) %>%
-  #   group_by(file) %>%
-  #   summarise(min = min(TIME_PERIOD), max = max(TIME_PERIOD))
- 
-
   message("... build completed ...")
   
 }

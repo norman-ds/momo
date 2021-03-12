@@ -3,7 +3,6 @@
 
 # library(curl::curl_download)
 # library(jsonlite::fromJSON)
-# library(yaml::read_yaml)
 
 #"https://opendata.swiss/de/dataset?q=%22Todesfälle+nach+Fünf-Jahres-Altersgruppe%22+Kanton"
 
@@ -14,6 +13,7 @@ stopifnot(openlist$success)
 
 # give list of all ids
 (idlist <- openlist$result[grepl(config$pattern, openlist$result)])
+cat(idlist, sep = '\n')
 
 # download datasets (metadata and urls) by id (slug)
 pdown <- function(id) {
