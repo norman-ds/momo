@@ -10,7 +10,7 @@ net:
  path : net
  format : json
  urlPackagelist : https://opendata.swiss/api/3/action/package_list
- pattern : "todesf.*lle.*alter.*kanton.*csv"
+ pattern : "todesf.*lle.*funf.*alter.*kanton"
  urlPackage : https://opendata.swiss/api/3/action/package_show
  datafile : deathdata.csv
  
