@@ -1,11 +1,15 @@
 # Weekly death data in Switzerland
 # Download from opendata.swiss
 
-library(tidyverse)
-library(jsonlite)
 source('R/config.R', local = T)
 config_all <- build_config()
 config <- config_all$data$net
+testdir <- '~/testdata'
+if(!dir.exists(testdir)) dir.create(testdir)
+config$path <- testdir
+
+library(tidyverse)
+library(jsonlite)
 # library(curl::curl_download)
 # library(jsonlite::fromJSON)
 
@@ -28,6 +32,5 @@ pdown <- function(id) {
   curl::curl_download(myurl, myfile)
   return(id)
 }
-
 unlist(lapply(idlist, pdown))
 
