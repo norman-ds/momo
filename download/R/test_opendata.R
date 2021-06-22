@@ -1,6 +1,11 @@
 # Weekly death data in Switzerland
 # Download from opendata.swiss
 
+library(tidyverse)
+library(jsonlite)
+# library(curl::curl_download)
+# library(jsonlite::fromJSON)
+
 source('R/config.R', local = T)
 config_all <- build_config()
 config <- config_all$data$net
@@ -8,10 +13,6 @@ testdir <- '~/testdata'
 if(!dir.exists(testdir)) dir.create(testdir)
 config$path <- testdir
 
-library(tidyverse)
-library(jsonlite)
-# library(curl::curl_download)
-# library(jsonlite::fromJSON)
 
 #"https://opendata.swiss/de/dataset?q=%22Todesfälle+nach+Fünf-Jahres-Altersgruppe%22+Kanton"
 
